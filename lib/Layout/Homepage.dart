@@ -1,8 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:smartscout/Layout/About.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
+import 'package:smartscout/Layout/Morse.dart';
+import 'package:smartscout/Layout/Semaphore.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -10,8 +13,6 @@ class Homepage extends StatefulWidget {
   @override
   _HomepageState createState() => _HomepageState();
 }
-
-int _selectedIndex = 0;
 
 class _HomepageState extends State<Homepage> {
   @override
@@ -36,7 +37,7 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             children: [
                               ListTile(
-                                title: Image.asset('assets/images/smartscout.png'),
+                                title: Image.asset('assets/images/semaphore.png'),
                                 onTap:(){
                                   _keSemaphore();
                                 },
@@ -61,7 +62,7 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             children: [
                               ListTile(
-                                title: Image.asset('assets/images/smartscout.png'),
+                                title: Image.asset('assets/images/morse.png'),
                                 onTap:(){
                                   _keMorse();
                                 },
@@ -94,7 +95,7 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             children: [
                               ListTile(
-                                title: Image.asset('assets/images/smartscout.png'),
+                                title: Image.asset('assets/images/pengetahuan.png'),
                                 onTap:(){
                                   _kePengetahuanDasar();
                                 },
@@ -119,7 +120,7 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             children: [
                               ListTile(
-                                title: Image.asset('assets/images/smartscout.png'),
+                                title: Image.asset('assets/images/game.png'),
                                 onTap: (){
                                   _keGame();
                                 },
@@ -142,7 +143,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                 )
               ],
-            )
+            ),
+          const SizedBox(height: 10),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -158,18 +160,24 @@ class _HomepageState extends State<Homepage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle_outlined), label: "Profil"),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: selectedIndex,
         onTap: _onItemTapped,
       ),
     );
   }
 
   void _keSemaphore(){
-    print("Ini akan mengalihkan ke Semaphore");
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const Semaphore()),
+            (route) => false);
   }
 
   void _keMorse(){
-    print("Ini akan mengalihkan ke Morse");
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const Morse()),
+            (route) => false);
   }
 
   void _kePengetahuanDasar(){
@@ -182,13 +190,16 @@ class _HomepageState extends State<Homepage> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      selectedIndex = index;
       if (index == 0) {
         print("Ke homepage");
       } else if (index == 1) {
         print("Ke ranking");
       } else if (index == 2) {
-        print("Ke tentang");
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => const About()),
+                (route) => false);
       } else if (index == 3) {
         print("Ke user");
       }
