@@ -41,15 +41,38 @@ class _AboutState extends State<About> {
           Container(
               height: 300,
               color: warnaUngu,
-              padding: EdgeInsets.only(top: 80),
+              padding: const EdgeInsets.only(top: 50),
               child: Column(children: [
                 Image.asset('assets/images/smartscout.png', width: 100, height: 100),
                 Text(dataNamaAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanBesar)),
                 Text(dataTaglineAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
-                Text(dataVersiAplikasi, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil))
+                Text(dataVersiAplikasi, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
+
               ])
+          ),
+          Card(
+            margin: EdgeInsets.all(5.0),
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                ],
+              ),
+            ),
+            elevation: 2,
+            shadowColor: warnaHitam,
           )
+
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.chat),
+        backgroundColor: warnaUngu,
+        onPressed: (){
+          print("Tombol floating ditekan");
+          kePopupKritik();
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -89,6 +112,55 @@ class _AboutState extends State<About> {
         print("Ke user");
       }
     });
+  }
+
+  void kePopupKritik(){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            scrollable: true,
+            content: Column(
+                children: <Widget>[
+                  Text(
+                    'Tulis Kritik dan Saran Anda',
+                    style: TextStyle(
+                        color: warnaHitam,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: ukFormTulisanSedang),
+                  ),
+                  TextFormField(
+                      minLines: 3,
+                      maxLines: null,
+                      decoration: const InputDecoration(
+                          isDense: true,
+                          hintText: 'Masukan kritik dan saran Anda',
+                          contentPadding: EdgeInsets.all(14),
+                          fillColor: warnaPutih,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: warnaUngu, width: 1.2),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                            BorderSide(color: warnaUngu),
+                          )),
+                      style: TextStyle(fontSize: ukFormTulisanKecil, color: warnaHitam)
+                  ),
+                  const SizedBox(width: 10, height: 10),
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 10.0),
+                    color: warnaUngu,
+                    child: IconButton(
+                        onPressed: () {
+
+                        },
+                        icon: Icon(Icons.send, size: ukIconBesar, color: warnaPutih)),
+                  ),
+                ],
+              ),
+          );
+        });
   }
 
 }
