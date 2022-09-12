@@ -34,24 +34,36 @@ class _BelajarState extends State<Belajar> {
         ),
         body: ListView(
           children: [
-            Container(
-                decoration: BoxDecoration(
-                    color: warnaPutih,
-                    border: Border.all(color: warnaAbu),
-                    borderRadius: BorderRadius.circular(15)),
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                  child: Text(
-                    judulMateri,
-                    style: TextStyle(
-                        color: warnaUngu,
-                        fontFamily: 'PoppinsMedium',
-                        fontSize: ukFormTulisanSedang),
-                  ),
-                )),
-            Container(
+            InkWell(
+              onTap: (){
+                keMateriBP();
+              },
+              child:
+              Container(
+                  decoration: BoxDecoration(
+                      color: warnaPutih,
+                      border: Border.all(color: warnaAbu),
+                      borderRadius: BorderRadius.circular(15)),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    child: Text(
+                      judulMateri,
+                      style: TextStyle(
+                          color: warnaUngu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanSedang),
+                    ),
+                  )
+              ),
+            ),
+            InkWell(
+              onTap: (){
+                keMateriSP();
+              },
+              child:
+              Container(
                 decoration: BoxDecoration(
                     color: warnaPutih,
                     border: Border.all(color: warnaAbu),
@@ -68,41 +80,66 @@ class _BelajarState extends State<Belajar> {
                         fontSize: ukFormTulisanSedang),
                   ),
                 )),
-            Container(
-                decoration: BoxDecoration(
-                    color: warnaPutih,
-                    border: Border.all(color: warnaAbu),
-                    borderRadius: BorderRadius.circular(15)),
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                  child: Text(
-                    judulKode,
-                    style: TextStyle(
-                        color: warnaUngu,
-                        fontFamily: 'PoppinsMedium',
-                        fontSize: ukFormTulisanSedang),
-                  ),
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    color: warnaPutih,
-                    border: Border.all(color: warnaAbu),
-                    borderRadius: BorderRadius.circular(15)),
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                  child: Text(
-                    judulLambang,
-                    style: TextStyle(
-                        color: warnaUngu,
-                        fontFamily: 'PoppinsMedium',
-                        fontSize: ukFormTulisanSedang),
-                  ),
-                )),
+            ),
+            InkWell(
+              onTap: (){
+                keMateriKK();
+              },
+              child:
+              Container(
+                  decoration: BoxDecoration(
+                      color: warnaPutih,
+                      border: Border.all(color: warnaAbu),
+                      borderRadius: BorderRadius.circular(15)),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    child: Text(
+                      judulKode,
+                      style: TextStyle(
+                          color: warnaUngu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanSedang),
+                    ),
+                  )),
+            ),
+            InkWell(
+              onTap: (){
+                keMateriLP();
+              },
+              child:
+              Container(
+                  decoration: BoxDecoration(
+                      color: warnaPutih,
+                      border: Border.all(color: warnaAbu),
+                      borderRadius: BorderRadius.circular(15)),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    child: Text(
+                      judulLambang,
+                      style: TextStyle(
+                          color: warnaUngu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanSedang),
+                    ),
+                  )),
+            )
           ],
         ));
+  }
+  void keMateriBP(){
+    print("Ke layout materi Boden Powel");
+  }
+  void keMateriSP(){
+    print("Ke layout materi Sejarah Pramuka");
+  }
+  void keMateriKK(){
+    print("Ke layout materi Kode Kehormatan");
+  }
+  void keMateriLP(){
+    print("Ke layout materi Lambang Pramuka");
   }
 }

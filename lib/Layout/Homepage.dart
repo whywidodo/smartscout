@@ -4,6 +4,7 @@ import 'package:smartscout/Layout/About.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
+import 'package:smartscout/Layout/Belajar.dart';
 import 'package:smartscout/Layout/Morse.dart';
 import 'package:smartscout/Layout/Semaphore.dart';
 
@@ -181,7 +182,10 @@ class _HomepageState extends State<Homepage> {
   }
 
   void _kePengetahuanDasar(){
-    print("Ini akan mengalihkan ke Pengetahuan Dasar");
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const Belajar()),
+            (route) => false);
   }
 
   void _keGame(){
