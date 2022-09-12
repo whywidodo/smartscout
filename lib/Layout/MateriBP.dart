@@ -41,7 +41,7 @@ class _MateriBPState extends State<MateriBP> {
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                   child: Column(
                     children: [
-                      Text(paragraf,
+                      Text(paragraf ,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: warnaHitam,

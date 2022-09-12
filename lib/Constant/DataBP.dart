@@ -26,9 +26,10 @@ var gelar = '''
 • Gelar kehormatan doktor Ilmu-ilmu sosial dari Universitas Oxford (1923)
 • Gelar kehormatan dari Universitas Liverpool (1929)
 • Gelar kehormatan dari Universitas Cambridge (1931)
+\n
 ''';
 var biografi =
-    "\n     Robert Stephenson Smyth Baden-Powell, Baron I Baden-Powell "
+    "     Robert Stephenson Smyth Baden-Powell, Baron I Baden-Powell "
     "Gilwell, adalah seorang tentara Inggris dan penemu the Boy Scouts, "
     "lahir di London, dan merupakan lulusan Charterhouse School. Bergabung "
     "dengan Pasukan Hussars Ke-13 di India pada tahun 1876. Dari 1888 sampai "

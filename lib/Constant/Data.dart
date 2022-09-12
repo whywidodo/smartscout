@@ -14,7 +14,7 @@ var judulPengetahuan = "Pengetahuan Umum";
 var judulMateri = "Biografi Baden Powell";
 var judulSejarah = "Sejarah Pramuka Indonesia";
 var judulKode = "Kode Kehormatan";
-var judulLambang = "Lambang Pramuka";
+var judulLambang = "Lambang Gerakan Pramuka";
 var judulGame = "Game";
 
 var mainSuara = "Mainkan Sekarang";

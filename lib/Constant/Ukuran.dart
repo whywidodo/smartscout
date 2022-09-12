@@ -1,6 +1,6 @@
 double ukJudulTulisan = 20.0;
 double ukIsiTulisan = 16.0;
-double ukIsiTulisanKecil = 12.0;
+double ukIsiTulisanKecil= 12.0;
 double ukFormTUlisanSuper = 34.0;
 double ukFormTulisanBesar = 28.0;
 double ukFormTulisanSedang = 16.0;
