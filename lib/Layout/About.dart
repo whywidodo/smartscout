@@ -26,6 +26,11 @@ class _AboutState extends State<About> {
             selectedIndex = 0;
           },
         ),
+        // shape: const RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.vertical(
+        //     bottom: Radius.circular(30)
+        //   )
+        // ),
         centerTitle: true,
         title: Text(judulAbout, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
         backgroundColor: warnaUngu,
@@ -39,8 +44,8 @@ class _AboutState extends State<About> {
               padding: EdgeInsets.only(top: 80),
               child: Column(children: [
                 Image.asset('assets/images/smartscout.png', width: 100, height: 100),
-                Text(dataNamaAplikasi, style: TextStyle(color: Colors.white, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanBesar)),
-                Text(dataTaglineAplikasi, style: TextStyle(color: Colors.white, fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
+                Text(dataNamaAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanBesar)),
+                Text(dataTaglineAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
                 Text(dataVersiAplikasi, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil))
               ])
           )

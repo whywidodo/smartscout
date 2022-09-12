@@ -12,3 +12,13 @@ var judulSemaphore = "Materi Semaphore";
 var judulMorse = "Materi Morse";
 var judulPengetahuan = "Pengetahuan Umum";
 var judulGame = "Game";
+
+var mainSuara = "Mainkan Sekarang";
+var putarSuara = "Play";
+var stopSuara = "Stop";
+
+List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",
+  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+List<String> hurufMorse = [".-", "-...", "-.-.", "-..", ".","..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
+  "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
+bool suara = false;
