@@ -11,6 +11,10 @@ var judulAbout = "Tentang Aplikasi";
 var judulSemaphore = "Materi Semaphore";
 var judulMorse = "Materi Morse";
 var judulPengetahuan = "Pengetahuan Umum";
+var judulMateri = "Biografi Boden Powel";
+var judulSejarah = "Sejarah Pramuka Indonesia";
+var judulKode = "Kode Kehormatan";
+var judulLambang = "Lambang Pramuka";
 var judulGame = "Game";
 
 var mainSuara = "Mainkan Sekarang";
