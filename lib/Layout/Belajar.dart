@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
+import 'package:smartscout/Layout/MateriBP.dart';
 import '../Constant/Ukuran.dart';
 import '../Constant/Warna.dart';
 import 'Homepage.dart';
@@ -131,7 +132,10 @@ class _BelajarState extends State<Belajar> {
         ));
   }
   void keMateriBP(){
-    print("Ke layout materi Boden Powel");
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const MateriBP()),
+            (route) => false);
   }
   void keMateriSP(){
     print("Ke layout materi Sejarah Pramuka");
