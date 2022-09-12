@@ -26,3 +26,5 @@ List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L",
 List<String> hurufMorse = [".-", "-...", "-.-.", "-..", ".","..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
   "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
 bool suara = false;
+
+var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus cras adipiscing enim eu turpis egestas pretium.";
