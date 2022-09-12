@@ -43,35 +43,8 @@ class _SemaphoreState extends State<Semaphore> {
                 childAspectRatio: 3 / 2,
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 5),
-            itemCount: 26,
+            itemCount: huruf.length,
             itemBuilder: (BuildContext ctx, int i) {
-
-              if(i==0){gridSemaphore = "A";}
-              if(i==1){gridSemaphore = "B";}
-              if(i==2){gridSemaphore = "C";}
-              if(i==3){gridSemaphore = "D";}
-              if(i==4){gridSemaphore = "E";}
-              if(i==5){gridSemaphore = "F";}
-              if(i==6){gridSemaphore = "G";}
-              if(i==7){gridSemaphore = "H";}
-              if(i==8){gridSemaphore = "I";}
-              if(i==9){gridSemaphore = "J";}
-              if(i==10){gridSemaphore = "K";}
-              if(i==11){gridSemaphore = "L";}
-              if(i==12){gridSemaphore = "M";}
-              if(i==13){gridSemaphore = "N";}
-              if(i==14){gridSemaphore = "O";}
-              if(i==15){gridSemaphore = "P";}
-              if(i==16){gridSemaphore = "Q";}
-              if(i==17){gridSemaphore = "R";}
-              if(i==18){gridSemaphore = "S";}
-              if(i==19){gridSemaphore = "T";}
-              if(i==20){gridSemaphore = "U";}
-              if(i==21){gridSemaphore = "V";}
-              if(i==22){gridSemaphore = "W";}
-              if(i==23){gridSemaphore = "X";}
-              if(i==24){gridSemaphore = "Y";}
-              if(i==25){gridSemaphore = "Z";}
               return Card(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -90,7 +63,7 @@ class _SemaphoreState extends State<Semaphore> {
 
                     ),
                     const SizedBox(height: 5),
-                    Text(gridSemaphore,
+                    Text(huruf[i],
                         style: TextStyle(fontSize: ukFormTulisanSedang),
                         textAlign: TextAlign.center),
                   ],

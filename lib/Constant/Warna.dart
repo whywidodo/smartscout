@@ -9,3 +9,5 @@ const warnaHitam = Color(0xFF3D3D3D);
 const warnaAbu = Color(0xFFCCCCCC);
 const warnaPutih = Color(0xFFFFFFFF);
 const warnaUngu = Color(0xFF6C3FA2);
+const warnaUnguOne = Color(0xFF8D54D0);
+const warnaUnguTwo = Color(0xFFAB6BF8);
