@@ -4,6 +4,7 @@ import 'package:smartscout/Layout/MateriBP.dart';
 import '../Constant/Ukuran.dart';
 import '../Constant/Warna.dart';
 import 'Homepage.dart';
+import 'MateriSejarah.dart';
 
 class Belajar extends StatefulWidget {
   const Belajar({Key? key}) : super(key: key);
@@ -36,11 +37,10 @@ class _BelajarState extends State<Belajar> {
         body: ListView(
           children: [
             InkWell(
-              onTap: (){
+              onTap: () {
                 keMateriBP();
               },
-              child:
-              Container(
+              child: Container(
                   decoration: BoxDecoration(
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
@@ -56,38 +56,35 @@ class _BelajarState extends State<Belajar> {
                           fontFamily: 'PoppinsMedium',
                           fontSize: ukFormTulisanSedang),
                     ),
-                  )
-              ),
+                  )),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 keMateriSP();
               },
-              child:
-              Container(
-                decoration: BoxDecoration(
-                    color: warnaPutih,
-                    border: Border.all(color: warnaAbu),
-                    borderRadius: BorderRadius.circular(15)),
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                  child: Text(
-                    judulSejarah,
-                    style: TextStyle(
-                        color: warnaUngu,
-                        fontFamily: 'PoppinsMedium',
-                        fontSize: ukFormTulisanSedang),
-                  ),
-                )),
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: warnaPutih,
+                      border: Border.all(color: warnaAbu),
+                      borderRadius: BorderRadius.circular(15)),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    child: Text(
+                      judulSejarah,
+                      style: TextStyle(
+                          color: warnaUngu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanSedang),
+                    ),
+                  )),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 keMateriKK();
               },
-              child:
-              Container(
+              child: Container(
                   decoration: BoxDecoration(
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
@@ -106,11 +103,10 @@ class _BelajarState extends State<Belajar> {
                   )),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 keMateriLP();
               },
-              child:
-              Container(
+              child: Container(
                   decoration: BoxDecoration(
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
@@ -131,19 +127,26 @@ class _BelajarState extends State<Belajar> {
           ],
         ));
   }
-  void keMateriBP(){
+
+  void keMateriBP() {
     Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => const MateriBP()),
-            (route) => false);
+        (route) => false);
   }
-  void keMateriSP(){
-    print("Ke layout materi Sejarah Pramuka");
+
+  void keMateriSP() {
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => MateriSejarah()),
+        (route) => false);
   }
-  void keMateriKK(){
+
+  void keMateriKK() {
     print("Ke layout materi Kode Kehormatan");
   }
-  void keMateriLP(){
+
+  void keMateriLP() {
     print("Ke layout materi Lambang Pramuka");
   }
 }

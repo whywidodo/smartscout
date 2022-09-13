@@ -69,7 +69,7 @@ var biografi3 = '''
 2. Klub menembak (Rifle Corps)
 3. Teater, kegemarannya ini terus digeluti hingga sering tampil dalam berbagai pementasan drama bersama sahabatnya Kenneth Mc Laren
 4. Melukis dan menggambar, gambar/illustrasi selalu mengisi berbagai karya tulisnya 
-5. Kiper kesebelasan Charterhouse
+5. Kiper kesebelasan Charterhouse\n
     ''';
 
 var biografi4 =
@@ -94,7 +94,7 @@ var biografi5 =
     "Kota Mafeking terhadap pengepungan bangsa Boer.\n\n";
 
 var biografi6 =
-    "     Selama kurang lebih 217 hari (dari tanggal 13 Oktober 1899 sampai tanggal 18 Mei 1900). "
+    "\n     Selama kurang lebih 217 hari (dari tanggal 13 Oktober 1899 sampai tanggal 18 Mei 1900). "
     "Karena jasa-jasanya ter sebut , pangkat Baden-Powell dinaikkan menjadi Mayor Jendral. "
     "Berita tersebut kemudian sampai juga ke Inggris. membuat seluruh keluarga Baden-Powell bangga."
     "Selama bertugas di Afrika. Baden-Powell banyak melakukan petualangan sehingga "
@@ -121,7 +121,7 @@ var biografi8 =
     "anggotanya. Perkemahan pertama tersebut diselenggarakan di Pulau Brownsea (Brownsea Island).\n\n";
 
 var biografi9 =
-    "     Baden-Powell pada tahun 1908 menulis buku Scouting For Boys, sebuah mahakarya "
+    "\n     Baden-Powell pada tahun 1908 menulis buku Scouting For Boys, sebuah mahakarya "
     "yang sangat spektakuler. Buku inilah yang mengakibatkan perkembangan kepanduan menjadi semakin besar. "
     "Buku ini menyebar di seluruh daratan Eropa sampai ke daerah-daerah jajahan. Pada tahun 1910, "
     "Baden-Powell meletakkan jabatannya di dinas ketentaraan dengan pangkat terakhirnya adalah "
@@ -145,6 +145,7 @@ var biografi11 =
     "dengan diantar di atas kereta yang ditarik oleh para pandu yang sangat mencintainya ke "
     "tempat peristirahatan terakhir.";
 
+var sumber = "fais huda, academia.edu";
 var paragraf = julukan + gelar + biografi;
 var paragraf2 = biografi1 + biografi2 + biografi3 + biografi4 + biografi5;
 var paragraf3 = biografi6 + biografi7 + biografi8;
