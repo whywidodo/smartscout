@@ -41,7 +41,53 @@ class _MateriBPState extends State<MateriBP> {
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                   child: Column(
                     children: [
-                      Text(paragraf ,
+                      Text(
+                        pendahuluan + biodata,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Image.asset('assets/images/bp.jpg'),
+                      Text(
+                        paragraf,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Image.asset('assets/images/perang.jpg'),
+                      Text(
+                        paragraf2,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Image.asset('assets/images/keluarga.jpg'),
+                      Text(
+                        paragraf3,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Image.asset('assets/images/penyambutan.jpg'),
+                      Text(
+                        paragraf4,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Image.asset('assets/images/batuNisan.jpg'),
+                      Text(
+                        biografi11,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: warnaHitam,

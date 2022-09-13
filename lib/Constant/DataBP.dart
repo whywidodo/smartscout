@@ -12,7 +12,7 @@ var biodata =
     "Domine Baden Powell. Sedangkan ibunya adalah Miss Henrietta Grace Smyth, "
     "seorang putri dari admiral Kerajaan Britania Raya yang terkenal yaitu William T. Smyth.\n\n";
 var julukan =
-    "     Para pandu biasa memanggilnya BP (bee-pee/bipi) Nama kecil dari Sir "
+    "\n     Para pandu biasa memanggilnya BP (bee-pee/bipi) Nama kecil dari Sir "
     "Robert Baden Powell adalah Ste, Stephe, Steevie atau Stephenson Di Chaterhouse "
     "School Baden Powell dijuluki sebagai “Bathing-Towel” Di Afrika Selatan "
     "Baden Powell mendapat julukan “Impeesa” yang artinya "
@@ -25,8 +25,7 @@ var gelar = '''
 • Gelar Doktor dari Universitas McGill di Montreal, Canada
 • Gelar kehormatan doktor Ilmu-ilmu sosial dari Universitas Oxford (1923)
 • Gelar kehormatan dari Universitas Liverpool (1929)
-• Gelar kehormatan dari Universitas Cambridge (1931)
-\n
+• Gelar kehormatan dari Universitas Cambridge (1931)\n
 ''';
 var biografi =
     "     Robert Stephenson Smyth Baden-Powell, Baron I Baden-Powell "
@@ -46,7 +45,7 @@ var biografi =
     "untuk para anak-anak dan remaja putri. Selama Perang Dunia I.\n\n";
 
 var biografi1 =
-    "     BP bersama saudara-saudaranya bertambah akrab sepeninggal ayahnya, "
+    "\n     BP bersama saudara-saudaranya bertambah akrab sepeninggal ayahnya, "
     "yang meninggal pada tanggal 11 Juni 1860. Pada usia 3 tahun Baden-Powell "
     "telah jadi seorang anak yatim. Sehingga dari sejak usia masih sangat muda, "
     "Baden-Powell dituntut untuk dapat hidup mandiri. Baden-Powell telah berusaha "
@@ -73,5 +72,80 @@ var biografi3 = '''
 5. Kiper kesebelasan Charterhouse
     ''';
 
-var paragraf =
-    pendahuluan + biodata + gelar + biografi1 + biografi2 + biografi3;
+var biografi4 =
+    "     Di Charterhouse School inilah Baden-Powell mendapat julukan lainya, yaitu "
+    "'Bathing-Tows!'.Di usia 19 tahun, Baden-Powell menamatkan sekolah di Charterhouse School. "
+    "Kemudian Baden-Powell memutuskan untuk bergabung dengan dinas kemiliteran, atas bantuan "
+    "pamannya Kolonel Henry Smyth, komandan dari Royal Military Academy di Woolwich. "
+    "Kemudian setelah lulus dari akademi militer tersebut Baden-Powell ditempatkan di India, "
+    "dengan pangkat pembantu lestnan.\n\n";
+
+var biografi5 =
+    "     Pengalaman Baden-Powell di ketentaraan inilah yang nantinya akan banyak mempengaruhi "
+    "perkembangan berdirinya gerakan kepanduan di Inggris."
+    "Selain itu Baden-Powell juga terkenal sebagai orang yang pandai bergaul dan banyak "
+    "kawannya. Salah seorang sahabatnya yang terdekat adalah Kenneth Mc Laren. Kebersamaan "
+    "mereka telah menghasilkan banyak pengalaman baik dalam kedinasan, pementasan drama, "
+    "maupun perburuan hewan liar (babi hutan). Setelah sempat berpindah-pindah "
+    "dari satu kota ke kota lain, dari satu daerah ke daerah lain dan bahkan dari satu negara "
+    "ke negara yang lain. Baden-Powell akhirnya bertugas di Mafeking. "
+    "sebuah kota di pedalaman Afrika Selatan. Kota inilah yang membuat nama BP menjadi "
+    "terkenal dan menjadi pahlawan bangsanya. karena jasa-jasanya dalam memimpin pertahanan "
+    "Kota Mafeking terhadap pengepungan bangsa Boer.\n\n";
+
+var biografi6 =
+    "     Selama kurang lebih 217 hari (dari tanggal 13 Oktober 1899 sampai tanggal 18 Mei 1900). "
+    "Karena jasa-jasanya ter sebut , pangkat Baden-Powell dinaikkan menjadi Mayor Jendral. "
+    "Berita tersebut kemudian sampai juga ke Inggris. membuat seluruh keluarga Baden-Powell bangga."
+    "Selama bertugas di Afrika. Baden-Powell banyak melakukan petualangan sehingga "
+    "pengalaman-pengalamannya makin bertambah. Karena keberaniannya. Baden-Powell "
+    "mendapat julukan IMPEESA dari suku-suku setempat seperti Zulu, Ashanti. dan Metabele. "
+    "Impeesa mempunyai arti “Srigala yang tidak pernah tidur”, Hal ini disebabkan "
+    "karena sifat waspada, cekatan, dan keberanian Baden-Powell (termasuk tindakan mengambil "
+    "kalung manik-manik milik Raja Dinuzulu).\n\n";
+
+var biografi7 =
+    "     Raja Dinuzulu. adalah raja Zulu dari 1884 -1889. raja yang merupakan "
+    "putra Raja Zulu Cetshwayo. beraliansi dengan para Afrikaners (orang kulit putih "
+    "keturunan Belanda) dan bersengketa dengan sepu punya, Zibhebhu yang didukung Inggris. "
+    "Dinuzulu lalu dituduh bersalah melakukan pengkhianatan sehingga diasingkan selama 10 tahun. "
+    "Dibebaskan tahun 1910. Karena dianggap tidak bersalah. Dinuzulu akhirnya meninggal tahun 1913.\n\n";
+
+var biografi8 =
+    "     Pada tahun 1901. Baden-Powell kembali ke tanah airnya, Inggris dengan disambut "
+    "besar-besaran sebagai salah satu pahlawan bangsanya. Kemudian BP sempat pula menulis "
+    "pengalaman-pengalamannya dalam buku Aids To Scouting Kemudian Pada tahun 1907 "
+    "Baden-Powell mendapatkan undangan dari perkumpulan Boys Brigade untuk "
+    "mengisahkan pengalaman-pengalamannya selama di Afrika khususnya dan selama di "
+    "dinas ketentaraan pada umumnya. dalam sebuah perkemahan yang diikuti 20 orang "
+    "anggotanya. Perkemahan pertama tersebut diselenggarakan di Pulau Brownsea (Brownsea Island).\n\n";
+
+var biografi9 =
+    "     Baden-Powell pada tahun 1908 menulis buku Scouting For Boys, sebuah mahakarya "
+    "yang sangat spektakuler. Buku inilah yang mengakibatkan perkembangan kepanduan menjadi semakin besar. "
+    "Buku ini menyebar di seluruh daratan Eropa sampai ke daerah-daerah jajahan. Pada tahun 1910, "
+    "Baden-Powell meletakkan jabatannya di dinas ketentaraan dengan pangkat terakhirnya adalah "
+    "Letnan Jendral. Mulailah Baden-Powell berkonsentrasi penuh untuk mengembangkan kepanduan ke seluruh dunia.\n\n";
+
+var biografi10 =
+    "     Pada tahun 1912, Baden-Powell mengadakan perjalanan keliling dunia untuk menemui para "
+    "pandu di berbagai negara. Baden-Powell menikah dengan Olave St. Clair Soames (Lady Baden-Powell) "
+    "pada tahun tersebut, dan kemudian dikaruniai tiga orang anak yaitu Peter, Heather dan Betty. "
+    "Pada tahun 1920, para pandu sedunia berkumpul di Olimpia, London, Inggris dalam acara "
+    "Jambore Dunia yang pertama. Pada hari terakhir kegiatan jambore tersebut (6 Agustus 1920) "
+    "Baden-Powell diangkat sebagai Chief Scout Of The World atau Bapak Pandu Sedunia. "
+    "Baden-Powell juga dianugerahi gelar Lord Baden-Powell Of Gilwell, dengan julukan Baron oleh Raia George V.\n\n";
+
+var biografi11 =
+    "\n     Setelah berkeliling dunia, termasuk mengunjungi Batavia (sekarang Jakarta) pada "
+    "tanggal 3 Desember 1934, sepulangnya dari meninjau Jambore di Australia, BP beserta Lady "
+    "Baden-Powell menghabiskan masa-masa akhirnya tinggal di Inggris (sekitar tahun 1935-1938). "
+    "Kemudian Baden-Powell kembali ke tanah yang amat dicintainya, Afrika. Dan BP menghabiskan "
+    "masa tuanya di Nyeri, Kenya. Beliau akhirnya, wafat pada tanggal 8 Januari 1941 dan "
+    "dengan diantar di atas kereta yang ditarik oleh para pandu yang sangat mencintainya ke "
+    "tempat peristirahatan terakhir.";
+
+var paragraf = julukan + gelar + biografi;
+var paragraf2 = biografi1 + biografi2 + biografi3 + biografi4 + biografi5;
+var paragraf3 = biografi6 + biografi7 + biografi8;
+var paragraf4 = biografi9 + biografi10;
