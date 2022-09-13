@@ -37,6 +37,7 @@ dependencies:
   fluttertoast: ^8.0.9
   audioplayers: ^1.0.1
   dialogs: ^0.0.7
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:

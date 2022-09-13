@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
@@ -26,11 +27,6 @@ class _AboutState extends State<About> {
             selectedIndex = 0;
           },
         ),
-        // shape: const RoundedRectangleBorder(
-        //   borderRadius: BorderRadius.vertical(
-        //     bottom: Radius.circular(30)
-        //   )
-        // ),
         centerTitle: true,
         title: Text(judulAbout, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
         backgroundColor: warnaUngu,
@@ -62,6 +58,19 @@ class _AboutState extends State<About> {
             ),
             elevation: 2,
             shadowColor: warnaHitam,
+          ),
+          Card(
+            margin: EdgeInsets.all(5.0),
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                ],
+              ),
+            ),
+            elevation: 2,
+            shadowColor: warnaHitam,
           )
 
         ],
@@ -70,25 +79,27 @@ class _AboutState extends State<About> {
         child: Icon(Icons.chat),
         backgroundColor: warnaUngu,
         onPressed: (){
-          print("Tombol floating ditekan");
           kePopupKritik();
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: warnaUngu,
-        unselectedItemColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Beranda"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart_outlined), label: "Ranking"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.info_outline), label: "Tentang"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle_outlined), label: "Profil"),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: warnaUngu,
+        index: selectedIndex,
+        height: ukNavbar,
+        color: warnaPutih,
+        buttonBackgroundColor: warnaPutih,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 300),
+        items: <Widget>[
+          Icon(Icons.home, size: ukIconBesar),
+          Icon(Icons.bar_chart_outlined, size: ukIconBesar),
+          Icon(Icons.info_outline, size: ukIconBesar),
+          Icon(Icons.account_circle_outlined, size: ukIconBesar),
         ],
-        currentIndex: selectedIndex,
-        onTap: _onItemTapped,
+        onTap: (index) {
+          _onItemTapped(index);
+        },
+        letIndexChange: (index) => true,
       ),
     );
   }
@@ -149,7 +160,7 @@ class _AboutState extends State<About> {
                   ),
                   const SizedBox(width: 10, height: 10),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10.0),
+                    margin: const EdgeInsets.only(top: 10, bottom: 5),
                     color: warnaUngu,
                     child: IconButton(
                         onPressed: () {

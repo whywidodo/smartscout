@@ -5,6 +5,7 @@ import 'package:smartscout/Constant/DataBP.dart';
 import 'package:smartscout/Layout/Belajar.dart';
 import '../Constant/Ukuran.dart';
 import '../Constant/Warna.dart';
+import '../Widget/WaveShape.dart';
 
 class MateriBP extends StatefulWidget {
   const MateriBP({Key? key}) : super(key: key);
@@ -28,11 +29,26 @@ class _MateriBPState extends State<MateriBP> {
           },
         ),
         centerTitle: true,
-        title: Text(
-          judulMateri,
-          style: const TextStyle(fontFamily: 'PoppinsMedium'),
+        elevation: 0.0,
+        toolbarHeight: 100,
+        backgroundColor: Colors.transparent,
+        flexibleSpace: ClipPath(
+          clipper: WaveShape(),
+          child: Container(
+            height: 240,
+            width: MediaQuery.of(context).size.width,
+            color: warnaUngu,
+            child: Center(
+                child:
+                Text(judulMateri,
+                  style: TextStyle(
+                      fontSize: ukFormTulisanSedang,
+                      color: Colors.white,
+                      fontFamily: 'PoppinsMedium')
+                )
+            ),
+          ),
         ),
-        backgroundColor: warnaUngu,
       ),
       body: ListView(
         children: [

@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:smartscout/Layout/About.dart';
@@ -148,21 +149,24 @@ class _HomepageState extends State<Homepage> {
           const SizedBox(height: 10),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: warnaUngu,
-        unselectedItemColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Beranda"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart_outlined), label: "Ranking"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.info_outline), label: "Tentang"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle_outlined), label: "Profil"),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: warnaUngu,
+        index: selectedIndex,
+        height: ukNavbar,
+        color: warnaPutih,
+        buttonBackgroundColor: warnaPutih,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 300),
+        items: <Widget>[
+          Icon(Icons.home, size: ukIconBesar),
+          Icon(Icons.bar_chart_outlined, size: ukIconBesar),
+          Icon(Icons.info_outline, size: ukIconBesar),
+          Icon(Icons.account_circle_outlined, size: ukIconBesar),
         ],
-        currentIndex: selectedIndex,
-        onTap: _onItemTapped,
+        onTap: (index) {
+          _onItemTapped(index);
+        },
+        letIndexChange: (index) => true,
       ),
     );
   }

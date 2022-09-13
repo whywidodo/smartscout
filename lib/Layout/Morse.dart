@@ -139,8 +139,9 @@ class _MorseState extends State<Morse> {
                         OutlinedButton.icon(
                           onPressed: () async {
                             player.stop();
+                            Navigator.of(context, rootNavigator: true).pop();
                           },
-                          icon: Icon(Icons.stop, size: ukFormTulisanBesar, color: warnaUngu),
+                          icon: Icon(Icons.close, size: ukFormTulisanBesar, color: warnaUngu),
                           label: Text(stopSuara, style: TextStyle(color: warnaUngu, fontSize: ukFormTulisanKecil)),
                         ),
                       ],
