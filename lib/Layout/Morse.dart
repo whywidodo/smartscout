@@ -97,8 +97,8 @@ class _MorseState extends State<Morse> {
               child: Column(
                 children: <Widget>[
                   Container(
-                      height: 100,
-                      width: 100,
+                      height: 0.2 * MediaQuery.of(context).size.height,
+                      width: 0.5 * MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(width: 1, color: warnaPutih),
@@ -124,8 +124,9 @@ class _MorseState extends State<Morse> {
                       fontSize: ukFormTulisanKecil)),
                   const SizedBox(width: 10, height: 10),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 0.0),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         OutlinedButton.icon(

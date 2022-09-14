@@ -1,18 +1,20 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:smartscout/Constant/Data.dart';
-import 'package:smartscout/Constant/Ukuran.dart';
-import 'package:smartscout/Constant/Warna.dart';
-import 'package:smartscout/Layout/Homepage.dart';
 
-class About extends StatefulWidget {
-  const About({Key? key}) : super(key: key);
+import '../../Constant/Data.dart';
+import '../../Constant/Ukuran.dart';
+import '../../Constant/Warna.dart';
+import '../About.dart';
+import '../Homepage.dart';
+
+class Soal1 extends StatefulWidget {
+  const Soal1({Key? key}) : super(key: key);
 
   @override
-  _AboutState createState() => _AboutState();
+  _Soal1State createState() => _Soal1State();
 }
 
-class _AboutState extends State<About> {
+class _Soal1State extends State<Soal1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,16 +38,22 @@ class _AboutState extends State<About> {
       body: ListView(
         children: [
           Container(
-              height: 300,
+              height: 250,
               color: warnaUngu,
-              padding: const EdgeInsets.only(top: 50),
-              child: Column(children: [
-                Image.asset('assets/images/smartscout.png', width: 100, height: 100),
-                Text(dataNamaAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanBesar)),
-                Text(dataTaglineAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
-                Text(dataVersiAplikasi, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              child:
+              Card(
+                color: warnaPutih,
+                margin: EdgeInsets.all(5.0),
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
 
-              ])
+                  ),
+                ),
+                elevation: 2,
+                shadowColor: warnaHitam,
+              )
           ),
           Card(
             margin: EdgeInsets.all(5.0),
@@ -77,10 +85,10 @@ class _AboutState extends State<About> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.chat),
+        child: Icon(Icons.navigate_next),
         backgroundColor: warnaUngu,
         onPressed: (){
-          kePopupKritik();
+          print("Berikutnya");
         },
       ),
       bottomNavigationBar: CurvedNavigationBar(
@@ -124,55 +132,6 @@ class _AboutState extends State<About> {
         print("Ke user");
       }
     });
-  }
-
-  void kePopupKritik(){
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            scrollable: true,
-            content: Column(
-                children: <Widget>[
-                  Text(
-                    'Tulis Kritik dan Saran Anda',
-                    style: TextStyle(
-                        color: warnaHitam,
-                        fontFamily: 'PoppinsMedium',
-                        fontSize: ukFormTulisanSedang),
-                  ),
-                  TextFormField(
-                      minLines: 3,
-                      maxLines: null,
-                      decoration: const InputDecoration(
-                          isDense: true,
-                          hintText: 'Masukan kritik dan saran Anda',
-                          contentPadding: EdgeInsets.all(14),
-                          fillColor: warnaPutih,
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: warnaUngu, width: 1.2),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                            BorderSide(color: warnaUngu),
-                          )),
-                      style: TextStyle(fontSize: ukFormTulisanKecil, color: warnaHitam)
-                  ),
-                  const SizedBox(width: 10, height: 10),
-                  Container(
-                    margin: const EdgeInsets.only(top: 10, bottom: 5),
-                    color: warnaUngu,
-                    child: IconButton(
-                        onPressed: () {
-
-                        },
-                        icon: Icon(Icons.send, size: ukIconBesar, color: warnaPutih)),
-                  ),
-                ],
-              ),
-          );
-        });
   }
 
 }

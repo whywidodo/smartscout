@@ -47,16 +47,31 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                    child: Text(
-                      judulMateri,
-                      style: TextStyle(
-                          color: warnaUngu,
-                          fontFamily: 'PoppinsMedium',
-                          fontSize: ukFormTulisanSedang),
-                    ),
-                  )),
+                  child:
+                  Row(
+                    children: [
+                      Card(
+                        color: warnaPutih,
+                        child: Image.asset(
+                          'assets/images/semaphore/0.png',
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                        child: Text(
+                          judulMateri,
+                          style: TextStyle(
+                              color: warnaUngu,
+                              fontFamily: 'PoppinsMedium',
+                              fontSize: ukFormTulisanSedang),
+                        ),
+                      )
+                    ],
+                  )
+              ),
             ),
             InkWell(
               onTap: () {
@@ -69,16 +84,31 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                    child: Text(
-                      judulSejarah,
-                      style: TextStyle(
-                          color: warnaUngu,
-                          fontFamily: 'PoppinsMedium',
-                          fontSize: ukFormTulisanSedang),
-                    ),
-                  )),
+                  child:
+                  Row(
+                    children: [
+                      Card(
+                        color: warnaPutih,
+                        child: Image.asset(
+                          'assets/images/semaphore/3.png',
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                        child: Text(
+                          judulSejarah,
+                          style: TextStyle(
+                              color: warnaUngu,
+                              fontFamily: 'PoppinsMedium',
+                              fontSize: ukFormTulisanSedang),
+                        ),
+                      )
+                    ],
+                  )
+              ),
             ),
             InkWell(
               onTap: () {
@@ -91,16 +121,31 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                    child: Text(
-                      judulKode,
-                      style: TextStyle(
-                          color: warnaUngu,
-                          fontFamily: 'PoppinsMedium',
-                          fontSize: ukFormTulisanSedang),
-                    ),
-                  )),
+                  child:
+                  Row(
+                    children: [
+                      Card(
+                        color: warnaPutih,
+                        child: Image.asset(
+                          'assets/images/semaphore/8.png',
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                        child: Text(
+                          judulKode,
+                          style: TextStyle(
+                              color: warnaUngu,
+                              fontFamily: 'PoppinsMedium',
+                              fontSize: ukFormTulisanSedang),
+                        ),
+                      )
+                    ],
+                  )
+              ),
             ),
             InkWell(
               onTap: () {
@@ -113,16 +158,31 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                    child: Text(
-                      judulLambang,
-                      style: TextStyle(
-                          color: warnaUngu,
-                          fontFamily: 'PoppinsMedium',
-                          fontSize: ukFormTulisanSedang),
-                    ),
-                  )),
+                  child:
+                  Row(
+                    children: [
+                      Card(
+                        color: warnaPutih,
+                        child: Image.asset(
+                          'assets/images/semaphore/15.png',
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                        child: Text(
+                          judulLambang,
+                          style: TextStyle(
+                              color: warnaUngu,
+                              fontFamily: 'PoppinsMedium',
+                              fontSize: ukFormTulisanSedang),
+                        ),
+                      )
+                    ],
+                  )
+              ),
             )
           ],
         ));

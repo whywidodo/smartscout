@@ -11,3 +11,10 @@ const warnaPutih = Color(0xFFFFFFFF);
 const warnaUngu = Color(0xFF6C3FA2);
 const warnaUnguOne = Color(0xFF8D54D0);
 const warnaUnguTwo = Color(0xFFAB6BF8);
+
+const warnaGreen200 = Color(0xFFA5D6A7);
+const warnaCyan200 = Color(0xFF80DEEA);
+const warnaOrange200 = Color(0xFFFFCC80);
+const warnaPink200 = Color(0xFFF48FB1);
+const warnaIndigo200 = Color(0xFF9FA8DA);
+const warnaPurple200 = Color(0xFFCE93D8);

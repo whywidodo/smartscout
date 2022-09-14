@@ -54,8 +54,8 @@ class _SemaphoreState extends State<Semaphore> {
                     InkResponse(
                       child: Image.asset(
                           'assets/images/semaphore/$i.png',
-                          height: 80,
-                          width: 80,
+                          height: MediaQuery.of(context).size.height/10,
+                          width: MediaQuery.of(context).size.width/4,
                           fit: BoxFit.contain),
                       onTap: () {
 
