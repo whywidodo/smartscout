@@ -44,6 +44,11 @@ class _HomepageState extends State<Homepage> {
                             width: MediaQuery.of(context).size.width/2,
                             decoration: BoxDecoration(
                                 color: warnaPurple200,
+                                gradient: const LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.topLeft,
+                                  colors: [warnaPurple500, warnaPurple200],
+                                ),
                                 borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
                             ),
                             child: Column(
@@ -78,6 +83,11 @@ class _HomepageState extends State<Homepage> {
                             width: MediaQuery.of(context).size.width/2,
                             decoration: BoxDecoration(
                                 color: warnaCyan200,
+                                gradient: const LinearGradient(
+                                  begin: Alignment.bottomLeft,
+                                  end: Alignment.topRight,
+                                  colors: [warnaCyan500, warnaCyan200],
+                                ),
                                 borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
                             ),
                             child: Column(
@@ -118,6 +128,11 @@ class _HomepageState extends State<Homepage> {
                             width: MediaQuery.of(context).size.width/2,
                             decoration: BoxDecoration(
                                 color: warnaOrange200,
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [warnaOrange500, warnaOrange200],
+                                ),
                                 borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
                             ),
                             child: Column(
@@ -152,6 +167,11 @@ class _HomepageState extends State<Homepage> {
                             width: MediaQuery.of(context).size.width/2,
                             decoration: BoxDecoration(
                                 color: warnaGreen200,
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [warnaGreen500, warnaGreen200],
+                                ),
                                 borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
                             ),
                             child: Column(
