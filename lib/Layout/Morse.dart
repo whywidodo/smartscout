@@ -12,8 +12,6 @@ class Morse extends StatefulWidget {
   _MorseState createState() => _MorseState();
 }
 
-// bool statusPlay = false;
-
 class _MorseState extends State<Morse> {
   final player = AudioPlayer();
   bool statusPlay = false;
@@ -45,44 +43,123 @@ class _MorseState extends State<Morse> {
             Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Homepage()), (route) => false);
           },
         ),
+        elevation: 0.0,
         centerTitle: true,
-        title: Text(judulMorse, style: const TextStyle(fontFamily: 'PoppinsMedium'),
-        ),
+        // title: Text(judulMorse, style: const TextStyle(fontFamily: 'PoppinsMedium')),
         backgroundColor: warnaUngu,
       ),
-      body: 
-      GridView.builder(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-          itemCount: huruf.length,
-          itemBuilder: (BuildContext ctx, int i) {
-            return InkWell(
-              onTap: () async {
-                String hurufBesar = huruf[i].toUpperCase();
-                String hurufKecil = huruf[i].toLowerCase();
-                int indeks = i;
-                print(hurufKecil);
-                kePopup(hurufBesar, indeks);
-              },
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(150),
-                ),
-                color: warnaUngu,
-                child:
-                Container(
-                    child: Center(
-                        child: Text(huruf[i],
-                            style:TextStyle(
-                                color:warnaPutih,
-                                fontFamily: 'PoppinsMedium',
-                                fontSize: ukFormTUlisanSuper))
-                    )
-                ),
-              ),
-            );
+      body:
 
-          }
+      ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              color: warnaUngu,
+              // padding: const EdgeInsets.only(top: 50),
+              child: Column(children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                          'assets/images/bgMorse.png',
+                          width: 0.4 * MediaQuery.of(context).size.width,
+                          height: 120
+                      ),
+                      SizedBox(width: 0.05 * MediaQuery.of(context).size.width),
+                      Column(
+                        children: [
+                          Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child:
+                            Text(textSandiMorse,
+                                style: TextStyle(
+                                    color: warnaPutih,
+                                    fontFamily: 'PoppinsMedium',
+                                    fontSize: ukFormTulisanPas)
+                            ),
+                          ),
+                          Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child:
+                            Text(dataTaglineAplikasi,
+                                style: TextStyle(color: warnaPutih,
+                                    fontFamily: 'PoppinsRegular',
+                                    fontSize: ukFormTulisanDeskripsi)
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ])
+          ),
+          ListView.builder(
+            shrinkWrap: true,
+              itemCount: huruf.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                    decoration: BoxDecoration(
+                        color: warnaPutih,
+                        border: Border.all(color: warnaAbu),
+                        borderRadius: BorderRadius.circular(15)),
+                    margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(width: 1, color: warnaPutih),
+                                  color: warnaUngu,
+                                ),
+
+                                child: Center(
+                                    child: Text(huruf[index],
+                                        style:TextStyle(
+                                            color:warnaPutih,
+                                            fontFamily: 'PoppinsMedium',
+                                            fontSize: ukFormTulisanBesar))
+                                )
+                            ),
+                            Text(hurufMorse[index],
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  letterSpacing: 3.0,
+                                  color: warnaHitam,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanBesar),
+                            ),
+                            Container(
+                                child: Row(
+                                    children: <Widget>[
+                                      IconButton(
+                                          icon: Icon(Icons.volume_up, color: warnaUngu, size: ukIconBesar),
+                                          onPressed: () {
+                                            String hurufBesar = huruf[index].toUpperCase();
+                                            String hurufKecil = huruf[index].toLowerCase();
+                                            int indeks = index;
+                                            print(hurufKecil);
+                                            kePopup(hurufBesar, indeks);
+                                          }),
+
+                                    ]))
+                          ]),
+                    )
+                );
+              }
+          ),
+          const SizedBox(height: 20)
+          ],
       )
     );
   }

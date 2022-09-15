@@ -12,14 +12,22 @@ var judulSemaphore = "Materi Semaphore";
 var judulMorse = "Materi Morse";
 var judulPengetahuan = "Pengetahuan Umum";
 var judulMateri = "Biografi Baden Powell";
-var judulSejarah = "Sejarah Pramuka Indonesia";
+var judulSejarah = "Sejarah Pramuka\nIndonesia";
+var judulSejarah1 = "Sejarah Pramuka Indonesia";
 var judulKode = "Kode Kehormatan";
 var judulLambang = "Lambang Gerakan Pramuka";
+var judulLambang1 = "Lambang Gerakan\nPramuka";
 var judulGame = "Game";
 
 var mainSuara = "Mainkan Sekarang";
 var putarSuara = "Play";
 var stopSuara = "Tutup";
+
+var textHai1 = "Selamat ";
+var textHai2 = "Datang";
+var textKMenu = "Menu Belajar";
+
+var textSandiMorse = "Sandi Morse";
 
 int valueSoal1 = 0;
 

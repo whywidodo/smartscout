@@ -27,8 +27,53 @@ class _HomepageState extends State<Homepage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Image.asset('assets/images/smartscout.png'),
+                  child:
+                  Container(
+                      alignment: Alignment.centerLeft,
+                      child:
+                      Row(
+                        children: [
+                          Text(
+                            textHai1,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: warnaHitam,
+                                fontFamily: 'PoppinsSemiBold',
+                                fontSize: ukFormTulisanPas),
+                          ),
+                          Text(
+                            textHai2,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: warnaUngu,
+                                fontFamily: 'PoppinsSemiBold',
+                                fontSize: ukFormTulisanPas),
+                          ),
+                        ],
+                      )
+                  ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                  child: Image.asset('assets/images/bgHomePage.png'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child:
+                  Container(
+                      alignment: Alignment.centerLeft,
+                      child:
+                      Text(
+                        textKMenu,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsSemiBold',
+                            fontSize: ukFormTulisanSedang),
+                      )
+                  ),
+                ),
+
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
                   child: Row(
