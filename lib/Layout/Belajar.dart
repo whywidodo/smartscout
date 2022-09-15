@@ -37,6 +37,7 @@ class _BelajarState extends State<Belajar> {
         ),
         body: ListView(
           children: [
+            Image.asset('assets/images/learning.png', height: 250),
             InkWell(
               onTap: () {
                 keMateriBP();
@@ -98,7 +99,7 @@ class _BelajarState extends State<Belajar> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                         child: Text(
-                          judulSejarah,
+                          judulSejarah1,
                           style: TextStyle(
                               color: warnaUngu,
                               fontFamily: 'PoppinsMedium',
@@ -170,7 +171,7 @@ class _BelajarState extends State<Belajar> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                         child: Text(
-                          judulLambang,
+                          judulLambang1,
                           style: TextStyle(
                               color: warnaUngu,
                               fontFamily: 'PoppinsMedium',
