@@ -52,23 +52,23 @@ class _BelajarState extends State<Belajar> {
                   child:
                   Row(
                     children: [
-                      Card(
-                        color: warnaPutih,
-                        child: Image.asset(
-                          'assets/images/bapaPandu.png',
-                          height: 70,
-                          fit: BoxFit.fitHeight,
-                        ),
+                      Image.asset(
+                        'assets/images/bapaPandu.png',
+                        height: 70,
+                        fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                        child: Text(
-                          judulMateri,
-                          style: TextStyle(
-                              color: warnaUngu,
-                              fontFamily: 'PoppinsMedium',
-                              fontSize: ukFormTulisanSedang),
-                        ),
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          child: Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child: Text(
+                              judulMateri,
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanSedang),
+                            ),
+                          )
                       )
                     ],
                   )
@@ -88,23 +88,23 @@ class _BelajarState extends State<Belajar> {
                   child:
                   Row(
                     children: [
-                      Card(
-                        color: warnaPutih,
-                        child: Image.asset(
-                          'assets/images/pramukaInd.png',
-                          height: 70,
-                          fit: BoxFit.fitHeight,
-                        ),
+                      Image.asset(
+                        'assets/images/pramukaInd.png',
+                        height: 70,
+                        fit: BoxFit.fitHeight,
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                        child: Text(
-                          judulSejarah1,
-                          style: TextStyle(
-                              color: warnaUngu,
-                              fontFamily: 'PoppinsMedium',
-                              fontSize: ukFormTulisanSedang),
-                        ),
+                        child: Container(
+                          width: 0.4 * MediaQuery.of(context).size.width,
+                          child: Text(
+                            judulSejarah1,
+                            style: TextStyle(
+                                color: warnaUngu,
+                                fontFamily: 'PoppinsMedium',
+                                fontSize: ukFormTulisanSedang),
+                          ),
+                        )
                       )
                     ],
                   )
@@ -124,23 +124,23 @@ class _BelajarState extends State<Belajar> {
                   child:
                   Row(
                     children: [
-                      Card(
-                        color: warnaPutih,
-                        child: Image.asset(
-                          'assets/images/kodeKeh.png',
-                          height: 70,
-                          fit: BoxFit.fitHeight,
-                        ),
+                      Image.asset(
+                        'assets/images/kodeKeh.png',
+                        height: 70,
+                        fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                        child: Text(
-                          judulKode,
-                          style: TextStyle(
-                              color: warnaUngu,
-                              fontFamily: 'PoppinsMedium',
-                              fontSize: ukFormTulisanSedang),
-                        ),
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          child: Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child: Text(
+                              judulKode,
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanSedang),
+                            ),
+                          )
                       )
                     ],
                   )
@@ -160,23 +160,23 @@ class _BelajarState extends State<Belajar> {
                   child:
                   Row(
                     children: [
-                      Card(
-                        color: warnaPutih,
-                        child: Image.asset(
-                          'assets/images/gerPramuka.png',
-                          height: 70,
-                          fit: BoxFit.fitHeight,
-                        ),
+                      Image.asset(
+                        'assets/images/gerPramuka.png',
+                        height: 70,
+                        fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                        child: Text(
-                          judulLambang1,
-                          style: TextStyle(
-                              color: warnaUngu,
-                              fontFamily: 'PoppinsMedium',
-                              fontSize: ukFormTulisanSedang),
-                        ),
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          child: Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child: Text(
+                              judulLambang,
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanSedang),
+                            ),
+                          )
                       )
                     ],
                   )
