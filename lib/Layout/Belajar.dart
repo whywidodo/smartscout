@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Layout/MateriBP.dart';
+import 'package:smartscout/Layout/MateriKK.dart';
 import '../Constant/Ukuran.dart';
 import '../Constant/Warna.dart';
 import 'Homepage.dart';
@@ -46,16 +47,15 @@ class _BelajarState extends State<Belajar> {
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
                     children: [
                       Card(
                         color: warnaPutih,
                         child: Image.asset(
-                          'assets/images/semaphore/0.png',
-                          height: 50,
-                          width: 50,
+                          'assets/images/bapaPandu.png',
+                          height: 70,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -83,16 +83,15 @@ class _BelajarState extends State<Belajar> {
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
                     children: [
                       Card(
                         color: warnaPutih,
                         child: Image.asset(
-                          'assets/images/semaphore/3.png',
-                          height: 50,
-                          width: 50,
+                          'assets/images/pramukaInd.png',
+                          height: 70,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -120,16 +119,15 @@ class _BelajarState extends State<Belajar> {
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
                     children: [
                       Card(
                         color: warnaPutih,
                         child: Image.asset(
-                          'assets/images/semaphore/8.png',
-                          height: 50,
-                          width: 50,
+                          'assets/images/kodeKeh.png',
+                          height: 70,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -157,16 +155,15 @@ class _BelajarState extends State<Belajar> {
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
                     children: [
                       Card(
                         color: warnaPutih,
                         child: Image.asset(
-                          'assets/images/semaphore/15.png',
-                          height: 50,
-                          width: 50,
+                          'assets/images/gerPramuka.png',
+                          height: 70,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -203,7 +200,10 @@ class _BelajarState extends State<Belajar> {
   }
 
   void keMateriKK() {
-    print("Ke layout materi Kode Kehormatan");
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => MateriKK()),
+            (route) => false);
   }
 
   void keMateriLP() {
