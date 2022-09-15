@@ -30,7 +30,6 @@ class _Soal1State extends State<Soal1> {
           },
         ),
         centerTitle: true,
-        // title: Text(judulAbout, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
         backgroundColor: warnaUngu,
         foregroundColor: warnaPutih,
         elevation: 0.0,
@@ -40,20 +39,29 @@ class _Soal1State extends State<Soal1> {
           Container(
               height: 250,
               color: warnaUngu,
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child:
-              Card(
-                color: warnaPutih,
-                margin: EdgeInsets.all(5.0),
-                child: Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Column(
-
+              Column(
+                children: [
+                  Center(
+                    child: Text("Soal 1", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
                   ),
-                ),
-                elevation: 2,
-                shadowColor: warnaHitam,
-              )
+                  Card(
+                    color: warnaPutih,
+                    margin: EdgeInsets.all(5.0),
+                    child: Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Column(
+                        children: [
+                          Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                        ],
+                      ),
+                    ),
+                    elevation: 2,
+                    shadowColor: warnaHitam,
+                  )
+                ],
+              ),
           ),
           Card(
             margin: EdgeInsets.all(5.0),
@@ -68,19 +76,15 @@ class _Soal1State extends State<Soal1> {
             elevation: 2,
             shadowColor: warnaHitam,
           ),
-          Card(
-            margin: EdgeInsets.all(5.0),
-            child: Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
-                ],
-              ),
-            ),
-            elevation: 2,
-            shadowColor: warnaHitam,
-          )
+          const SizedBox(height: 10),
+          Column(
+            children: <Widget> [
+              CustomRadio("14 Agustus", 1),
+              CustomRadio("14 September", 2),
+              CustomRadio("14 Oktober", 3),
+              CustomRadio("14 November", 4),
+            ],
+          ),
 
         ],
       ),
@@ -88,7 +92,8 @@ class _Soal1State extends State<Soal1> {
         child: Icon(Icons.navigate_next),
         backgroundColor: warnaUngu,
         onPressed: (){
-          print("Berikutnya");
+          // print("Berikutnya");
+          print(valueSoal1);
         },
       ),
       bottomNavigationBar: CurvedNavigationBar(
@@ -110,6 +115,39 @@ class _Soal1State extends State<Soal1> {
         },
         letIndexChange: (index) => true,
       ),
+    );
+  }
+
+  Widget CustomRadio(String text, int index){
+    return Container(
+      height: 0.05 * MediaQuery.of(context).size.height,
+      width: 0.8 * MediaQuery.of(context).size.width,
+      child:
+      Padding(
+        padding: EdgeInsets.symmetric(vertical: 2.0),
+        child: OutlinedButton(
+          child: Text(text),
+          style: OutlinedButton.styleFrom(
+            padding: EdgeInsets.symmetric(vertical: 8.0),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            side: BorderSide(
+                color: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
+                width: 0.5
+            ),
+            primary: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
+            textStyle: TextStyle(
+                color: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
+                fontSize: ukFormTulisanSedang,
+                fontStyle: FontStyle.normal
+            ),
+          ),
+          onPressed: () {
+            setState(() {
+              valueSoal1 = index;
+            });
+          },
+        ),
+      )
     );
   }
 
