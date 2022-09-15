@@ -20,27 +20,27 @@ var satya = '''
 
 ''';
 var pembuka3 =
-    "Sedangkan Darma Pramuka, sebagaimana tercantum dalam ART Gerakan Pramuka, merupakan :\n";
+    "     Sedangkan Darma Pramuka, sebagaimana tercantum dalam ART Gerakan Pramuka, merupakan :\n";
 var darma = '''
-1. Nilai dasar untuk membina dan mengembangkan akhlak mulia;
-2. Sistem nilai yang harus dihayati, dimiliki, dan diamalkan dalam kehidupan anggota Gerakan Pramuka di masyarakat;
-3. Landasan gerak bagi Gerakan Pramuka untuk mencapai tujuan pendidikan  kepramukaan yang diwujudkan dalam kegiatan untuk mendorong peserta didik manunggal dengan masyarakat, bersikap demokratis, saling menghormati, serta memiliki rasa kebersamaan dan gotong royong; dan
+1. Nilai dasar untuk membina dan mengembangkan akhlak mulia
+2. Sistem nilai yang harus dihayati, dimiliki, dan diamalkan dalam kehidupan anggota Gerakan Pramuka di masyarakat
+3. Landasan gerak bagi Gerakan Pramuka untuk mencapai tujuan pendidikan  kepramukaan yang diwujudkan dalam kegiatan untuk mendorong peserta didik manunggal dengan masyarakat, bersikap demokratis, saling menghormati, serta memiliki rasa kebersamaan dan gotong royong dan
 4. Kode etik bagi organisasi dan anggota Gerakan Pramuka.
-
 ''';
 var macamKode = "Jenis Kode Kehormatan";
 var detail =
-    "     Dalam Gerakan Pramuka, kode kehormatan ditetapkan dan diterapkan "
+    "\n     Dalam Gerakan Pramuka, kode kehormatan ditetapkan dan diterapkan "
     "sesuai dengan golongan usia dan perkembangan rohani dan jasmani "
-    "anggota Gerakan Pramuka yang meliputi : ";
+    "anggota Gerakan Pramuka yang meliputi : \n";
 
-var siaga = "Kode kehormatan bagi pramuka siaga yang meliputi Dwisatya (janji "
-    "dan komitmen diri) dan Dwidarma (ketentuan moral). Bunyi kode kehormatannya adalah : \n";
+var siaga =
+    "     Kode kehormatan bagi pramuka siaga yang meliputi Dwisatya (janji "
+    "dan komitmen diri) dan Dwidarma (ketentuan moral). Bunyi kode kehormatannya adalah : \n\n";
 
 var Dwisatya = '''
 Demi kehormatanku aku berjanji akan bersungguh-sungguh : 
 • Menjalankan kewajibanku terhadap Tuhan Yang Maha Esa, Negara Kesatuan Republik Indonesia dan menurut aturan keluarga.
-• Setiap hari berbuat kebaikan.
+• Setiap hari berbuat kebaikan.\n
 ''';
 
 var Dwidarma = '''
@@ -49,14 +49,14 @@ var Dwidarma = '''
 ''';
 
 var penggalang =
-    "Kode kehormatan bagi pramuka penggalang yang meliputi Trisatya "
-    "(janji dan komitmen diri) dan Dasadarma (ketentuan moral).\n";
+    "     Kode kehormatan bagi pramuka penggalang yang meliputi Trisatya "
+    "(janji dan komitmen diri) dan Dasadarma (ketentuan moral).\n\n";
 
 var Trisatya = '''
 Demi kehormatanku aku berjanji akan bersungguh-sungguh :
 • Menjalankan kewajibanku terhadap Tuhan Yang Maha Esa, Negara Kesatuan Republik Indonesia dan mengamalkan Pancasila
 • Menolong sesama hidup dan mempersiapkan diri membangun masyarakat,
-• Menepati Dasadarma.
+• Menepati Dasadarma.\n
 ''';
 
 var Dasadarma = '''
@@ -69,18 +69,21 @@ var Dasadarma = '''
 7.  Hemat, cermat dan bersahaja
 8.  Disiplin berani dan setia
 9.  Bertanggung jawab dan dapat dipercaya
-10. Suci dalam pikiran, perkataan dan perbuatan
+10. Suci dalam pikiran, perkataan dan perbuatan\n
 ''';
 
-var penegak = "Kode kehormatan bagi pramuka penegak, pramuka pandega, dan "
+var penegak = "     Kode kehormatan bagi pramuka penegak, pramuka pandega, dan "
     "anggota dewasa yang meliputi Trisatya (janji dan komitmen diri) dan "
-    "Dasadarma (ketentuan moral).\n";
+    "Dasadarma (ketentuan moral).\n\n";
 
 var Trisatya1 = '''
 Demi kehormatanku aku berjanji akan bersungguh-sungguh :
 • Menjalankan kewajibanku terhadap Tuhan Yang Maha Esa, Negara Kesatuan Republik Indonesia dan mengamalkan Pancasila
 • Menolong sesama hidup dan ikut serta membangun masyarakat,
-• Menepati Dasadarma.
+• Menepati Dasadarma.\n
 ''';
 
-
+var dwi = "Dwisatya\n\n";
+var dwidar = "Dwidarma\n\n";
+var tri = "Trisatya\n\n";
+var dasa = "Dasadarma\n\n";

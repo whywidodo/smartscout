@@ -55,6 +55,14 @@ class _MateriKKState extends State<MateriKK> {
                   child: Column(
                     children: [
                       Text(
+                        "Pengertian\n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisan),
+                      ),
+                      Text(
                         pembuka + pembuka2 + satya + pembuka3 + darma,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
@@ -71,12 +79,7 @@ class _MateriKKState extends State<MateriKK> {
                             fontSize: ukIsiTulisan),
                       ),
                       Text(
-                        detail +
-                            siaga +
-                            "Dwisatya\n" +
-                            Dwisatya +
-                            "Dwidarma\n" +
-                            Dwidarma,
+                        detail,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: warnaHitam,
@@ -84,11 +87,15 @@ class _MateriKKState extends State<MateriKK> {
                             fontSize: ukIsiTulisanKecil),
                       ),
                       Text(
-                        penggalang +
-                            "Trisatya\n" +
-                            Trisatya +
-                            "Dasadarma\n" +
-                            Dasadarma,
+                        "Siaga\n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisan),
+                      ),
+                      Text(
+                        siaga + dwi + Dwisatya + dwidar + Dwidarma,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: warnaHitam,
@@ -96,11 +103,31 @@ class _MateriKKState extends State<MateriKK> {
                             fontSize: ukIsiTulisanKecil),
                       ),
                       Text(
-                        penegak +
-                            "Trisatya\n" +
-                            Trisatya1 +
-                            "Dasadarma\n" +
-                            Dasadarma,
+                        "Penggalang\n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisan),
+                      ),
+                      Text(
+                        penggalang + tri + Trisatya + dasa + Dasadarma,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisanKecil),
+                      ),
+                      Text(
+                        "Penegak\n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: warnaHitam,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: ukIsiTulisan),
+                      ),
+                      Text(
+                        penegak + tri + Trisatya1 + dasa + Dasadarma,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                             color: warnaHitam,

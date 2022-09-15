@@ -98,7 +98,7 @@ class _BelajarState extends State<Belajar> {
                         child: Container(
                           width: 0.4 * MediaQuery.of(context).size.width,
                           child: Text(
-                            judulSejarah1,
+                            judulSejarah,
                             style: TextStyle(
                                 color: warnaUngu,
                                 fontFamily: 'PoppinsMedium',
