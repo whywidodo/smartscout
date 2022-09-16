@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Layout/MateriBP.dart';
 import 'package:smartscout/Layout/MateriKK.dart';
+import 'package:smartscout/Layout/MateriLGP.dart';
 import '../Constant/Ukuran.dart';
 import '../Constant/Warna.dart';
 import 'Homepage.dart';
@@ -48,8 +49,7 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
-                  child:
-                  Row(
+                  child: Row(
                     children: [
                       Image.asset(
                         'assets/images/bapaPandu.png',
@@ -57,7 +57,8 @@ class _BelajarState extends State<Belajar> {
                         fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 15),
                           child: Container(
                             width: 0.4 * MediaQuery.of(context).size.width,
                             child: Text(
@@ -67,11 +68,9 @@ class _BelajarState extends State<Belajar> {
                                   fontFamily: 'PoppinsMedium',
                                   fontSize: ukFormTulisanSedang),
                             ),
-                          )
-                      )
+                          ))
                     ],
-                  )
-              ),
+                  )),
             ),
             InkWell(
               onTap: () {
@@ -84,8 +83,7 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
-                  child:
-                  Row(
+                  child: Row(
                     children: [
                       Image.asset(
                         'assets/images/pramukaInd.png',
@@ -93,21 +91,20 @@ class _BelajarState extends State<Belajar> {
                         fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                        child: Container(
-                          width: 0.4 * MediaQuery.of(context).size.width,
-                          child: Text(
-                            judulSejarah,
-                            style: TextStyle(
-                                color: warnaUngu,
-                                fontFamily: 'PoppinsMedium',
-                                fontSize: ukFormTulisanSedang),
-                          ),
-                        )
-                      )
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 15),
+                          child: Container(
+                            width: 0.4 * MediaQuery.of(context).size.width,
+                            child: Text(
+                              judulSejarah,
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanSedang),
+                            ),
+                          ))
                     ],
-                  )
-              ),
+                  )),
             ),
             InkWell(
               onTap: () {
@@ -120,8 +117,7 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
-                  child:
-                  Row(
+                  child: Row(
                     children: [
                       Image.asset(
                         'assets/images/kodeKeh.png',
@@ -129,7 +125,8 @@ class _BelajarState extends State<Belajar> {
                         fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 15),
                           child: Container(
                             width: 0.4 * MediaQuery.of(context).size.width,
                             child: Text(
@@ -139,11 +136,9 @@ class _BelajarState extends State<Belajar> {
                                   fontFamily: 'PoppinsMedium',
                                   fontSize: ukFormTulisanSedang),
                             ),
-                          )
-                      )
+                          ))
                     ],
-                  )
-              ),
+                  )),
             ),
             InkWell(
               onTap: () {
@@ -156,8 +151,7 @@ class _BelajarState extends State<Belajar> {
                       borderRadius: BorderRadius.circular(15)),
                   margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
-                  child:
-                  Row(
+                  child: Row(
                     children: [
                       Image.asset(
                         'assets/images/gerPramuka.png',
@@ -165,7 +159,8 @@ class _BelajarState extends State<Belajar> {
                         fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 15),
                           child: Container(
                             width: 0.4 * MediaQuery.of(context).size.width,
                             child: Text(
@@ -175,11 +170,9 @@ class _BelajarState extends State<Belajar> {
                                   fontFamily: 'PoppinsMedium',
                                   fontSize: ukFormTulisanSedang),
                             ),
-                          )
-                      )
+                          ))
                     ],
-                  )
-              ),
+                  )),
             )
           ],
         ));
@@ -216,6 +209,12 @@ class _BelajarState extends State<Belajar> {
   }
 
   void keMateriLP() {
-    print("Ke layout materi Lambang Pramuka");
+    // Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MateriLGP()));
+    // Navigator.pushAndRemoveUntil(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => MateriKK()),
+    //         (route) => false);
   }
 }
