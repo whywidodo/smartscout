@@ -20,10 +20,9 @@ class _AboutState extends State<About> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const Homepage()),
-                    (route) => false);
+            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Homepage()));
             selectedIndex = 0;
           },
         ),
@@ -109,17 +108,15 @@ class _AboutState extends State<About> {
     setState(() {
       selectedIndex = index;
       if (index == 0) {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (context) => const Homepage()),
-                (route) => false);
+        Navigator.pop(context);
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Homepage()));
       } else if (index == 1) {
         print("Ke ranking");
       } else if (index == 2) {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (context) => const About()),
-                (route) => false);
+        Navigator.pop(context);
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => About()));
       } else if (index == 3) {
         print("Ke user");
       }

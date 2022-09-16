@@ -22,10 +22,9 @@ class _BelajarState extends State<Belajar> {
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Homepage()),
-                  (route) => false);
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Homepage()));
             },
           ),
           centerTitle: true,
@@ -47,7 +46,7 @@ class _BelajarState extends State<Belajar> {
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
-                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
@@ -83,7 +82,7 @@ class _BelajarState extends State<Belajar> {
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
-                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
@@ -119,7 +118,7 @@ class _BelajarState extends State<Belajar> {
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
-                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
@@ -155,7 +154,7 @@ class _BelajarState extends State<Belajar> {
                       color: warnaPutih,
                       border: Border.all(color: warnaAbu),
                       borderRadius: BorderRadius.circular(15)),
-                  margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child:
                   Row(
@@ -187,24 +186,33 @@ class _BelajarState extends State<Belajar> {
   }
 
   void keMateriBP() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const MateriBP()),
-        (route) => false);
+    // Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MateriBP()));
+    // Navigator.pushAndRemoveUntil(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => const MateriBP()),
+    //     (route) => false);
   }
 
   void keMateriSP() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => MateriSejarah()),
-        (route) => false);
+    // Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MateriSejarah()));
+    // Navigator.pushAndRemoveUntil(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => MateriSejarah()),
+    //     (route) => false);
   }
 
   void keMateriKK() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => MateriKK()),
-            (route) => false);
+    // Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MateriKK()));
+    // Navigator.pushAndRemoveUntil(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => MateriKK()),
+    //         (route) => false);
   }
 
   void keMateriLP() {

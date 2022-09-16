@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:smartscout/Constant/Data.dart';
@@ -19,11 +20,11 @@ class _MorseState extends State<Morse> {
   @override
   void initState(){
     super.initState();
-    player.onPlayerStateChanged.listen((state) {
-      setState(() {
-        statusPlay = state == PlayerState.playing;
-      });
-    });
+    // player.onPlayerStateChanged.listen((state) {
+    //   setState(() {
+    //     statusPlay = state == PlayerState.playing;
+    //   });
+    // });
   }
 
   @override
@@ -40,7 +41,9 @@ class _MorseState extends State<Morse> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Homepage()), (route) => false);
+            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Homepage()));
           },
         ),
         elevation: 0.0,
@@ -48,118 +51,122 @@ class _MorseState extends State<Morse> {
         // title: Text(judulMorse, style: const TextStyle(fontFamily: 'PoppinsMedium')),
         backgroundColor: warnaUngu,
       ),
-      body:
-
-      ListView(
+      body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        children: [
-          Container(
-              height: 200,
-              width: MediaQuery.of(context).size.width,
-              color: warnaUngu,
-              // padding: const EdgeInsets.only(top: 50),
-              child: Column(children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                          'assets/images/bgMorse.png',
-                          width: 0.4 * MediaQuery.of(context).size.width,
-                          height: 120
-                      ),
-                      SizedBox(width: 0.05 * MediaQuery.of(context).size.width),
-                      Column(
-                        children: [
-                          Container(
+        physics: AlwaysScrollableScrollPhysics(),
+        child: Column(
+          children: <Widget>[
+            Container(
+                height: 200,
+                width: MediaQuery.of(context).size.width,
+                color: warnaUngu,
+                // padding: const EdgeInsets.only(top: 50),
+                child: Column(children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                            'assets/images/bgMorse.png',
                             width: 0.4 * MediaQuery.of(context).size.width,
-                            child:
-                            Text(textSandiMorse,
-                                style: TextStyle(
-                                    color: warnaPutih,
-                                    fontFamily: 'PoppinsMedium',
-                                    fontSize: ukFormTulisanPas)
-                            ),
-                          ),
-                          Container(
-                            width: 0.4 * MediaQuery.of(context).size.width,
-                            child:
-                            Text(dataTaglineAplikasi,
-                                style: TextStyle(color: warnaPutih,
-                                    fontFamily: 'PoppinsRegular',
-                                    fontSize: ukFormTulisanDeskripsi)
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ])
-          ),
-          ListView.builder(
-            shrinkWrap: true,
-              itemCount: huruf.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Container(
-                    decoration: BoxDecoration(
-                        color: warnaPutih,
-                        border: Border.all(color: warnaAbu),
-                        borderRadius: BorderRadius.circular(15)),
-                    margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child:
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            height: 120
+                        ),
+                        SizedBox(width: 0.05 * MediaQuery.of(context).size.width),
+                        Column(
                           children: [
                             Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(width: 1, color: warnaPutih),
-                                  color: warnaUngu,
-                                ),
-
-                                child: Center(
-                                    child: Text(huruf[index],
-                                        style:TextStyle(
-                                            color:warnaPutih,
-                                            fontFamily: 'PoppinsMedium',
-                                            fontSize: ukFormTulisanBesar))
-                                )
-                            ),
-                            Text(hurufMorse[index],
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  letterSpacing: 3.0,
-                                  color: warnaHitam,
-                                  fontFamily: 'PoppinsMedium',
-                                  fontSize: ukFormTulisanBesar),
+                              width: 0.4 * MediaQuery.of(context).size.width,
+                              child:
+                              Text(textSandiMorse,
+                                  style: TextStyle(
+                                      color: warnaPutih,
+                                      fontFamily: 'PoppinsMedium',
+                                      fontSize: ukFormTulisanPas)
+                              ),
                             ),
                             Container(
-                                child: Row(
-                                    children: <Widget>[
-                                      IconButton(
-                                          icon: Icon(Icons.volume_up, color: warnaUngu, size: ukIconBesar),
-                                          onPressed: () {
-                                            String hurufBesar = huruf[index].toUpperCase();
-                                            String hurufKecil = huruf[index].toLowerCase();
-                                            int indeks = index;
-                                            print(hurufKecil);
-                                            kePopup(hurufBesar, indeks);
-                                          }),
+                              width: 0.4 * MediaQuery.of(context).size.width,
+                              child:
+                              Text(dataTaglineAplikasi,
+                                  style: TextStyle(color: warnaPutih,
+                                      fontFamily: 'PoppinsRegular',
+                                      fontSize: ukFormTulisanDeskripsi)
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ])
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: huruf.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                        decoration: BoxDecoration(
+                            color: warnaPutih,
+                            border: Border.all(color: warnaAbu),
+                            borderRadius: BorderRadius.circular(15)),
+                        margin: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child:
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      border: Border.all(width: 1, color: warnaPutih),
+                                      color: warnaUngu,
+                                    ),
 
-                                    ]))
-                          ]),
-                    )
-                );
-              }
-          ),
-          const SizedBox(height: 20)
+                                    child: Center(
+                                        child: Text(huruf[index],
+                                            style:TextStyle(
+                                                color:warnaPutih,
+                                                fontFamily: 'PoppinsMedium',
+                                                fontSize: ukFormTulisanBesar))
+                                    )
+                                ),
+                                Text(hurufMorse[index],
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      letterSpacing: 3.0,
+                                      color: warnaHitam,
+                                      fontFamily: 'PoppinsMedium',
+                                      fontSize: ukFormTulisanBesar),
+                                ),
+                                Container(
+                                    child: Row(
+                                        children: <Widget>[
+                                          IconButton(
+                                              icon: Icon(Icons.volume_up, color: warnaUngu, size: ukIconBesar),
+                                              onPressed: () {
+                                                String hurufBesar = huruf[index].toUpperCase();
+                                                String hurufKecil = huruf[index].toLowerCase();
+                                                int indeks = index;
+                                                print(hurufKecil);
+                                                kePopup(hurufBesar, indeks);
+                                              }),
+
+                                        ]))
+                              ]),
+                        )
+                    );
+                  }
+              ),
+            ),
+            const SizedBox(height: 20)
           ],
+        ),
       )
     );
   }

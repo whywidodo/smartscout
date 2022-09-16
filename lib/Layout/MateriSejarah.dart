@@ -22,10 +22,9 @@ class _MateriSejarahState extends State<MateriSejarah> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const Belajar()),
-                (route) => false);
+            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Belajar()));
           },
         ),
         centerTitle: true,

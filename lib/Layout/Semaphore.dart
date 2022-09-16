@@ -22,10 +22,9 @@ class _SemaphoreState extends State<Semaphore> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const Homepage()),
-                    (route) => false);
+            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Homepage()));
             selectedIndex = 0;
           },
         ),
