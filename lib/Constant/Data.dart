@@ -29,6 +29,11 @@ var textKMenu = "Menu Belajar";
 
 var textSandiMorse = "Sandi Morse";
 
+var gameMenu = "Pilihan Game";
+var gameKuis = "Kuis Umum";
+var gameDragDrop = "Cocokan Gambar";
+var gameTebak = "Tebak Gambar";
+
 int valueSoal1 = 0;
 
 List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",

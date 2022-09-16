@@ -23,7 +23,7 @@ class DiagonalShape extends CustomClipper<Path>{
   Path getClip(Size size) {
     final path = Path()
       ..lineTo(0.0, size.height)
-      ..lineTo(size.width, size.height - 50)
+      ..lineTo(size.width, size.height - 40)
       ..lineTo(size.width, 0.0)
       ..close();
     return path;

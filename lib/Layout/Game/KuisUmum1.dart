@@ -1,11 +1,9 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:smartscout/Layout/Game/MenuGame.dart';
 
 import '../../Constant/Data.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
-import '../About.dart';
-import '../Homepage.dart';
 
 class Soal1 extends StatefulWidget {
   const Soal1({Key? key}) : super(key: key);
@@ -24,7 +22,7 @@ class _Soal1State extends State<Soal1> {
           onPressed: () {
             Navigator.pop(context);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Homepage()));
+                context, MaterialPageRoute(builder: (context) => MenuGame()));
             selectedIndex = 0;
           },
         ),
@@ -95,25 +93,6 @@ class _Soal1State extends State<Soal1> {
           print(valueSoal1);
         },
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: warnaUngu,
-        index: selectedIndex,
-        height: ukNavbar,
-        color: warnaPutih,
-        buttonBackgroundColor: warnaPutih,
-        animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 300),
-        items: <Widget>[
-          Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.bar_chart_outlined, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.account_circle_outlined, size: ukIconBesar, color: warnaUngu),
-        ],
-        onTap: (index) {
-          _onItemTapped(index);
-        },
-        letIndexChange: (index) => true,
-      ),
     );
   }
 
@@ -149,24 +128,4 @@ class _Soal1State extends State<Soal1> {
       )
     );
   }
-
-  void _onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-      if (index == 0) {
-        Navigator.pop(context);
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Homepage()));
-      } else if (index == 1) {
-        print("Ke ranking");
-      } else if (index == 2) {
-        Navigator.pop(context);
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => About()));
-      } else if (index == 3) {
-        print("Ke user");
-      }
-    });
-  }
-
 }

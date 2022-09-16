@@ -175,7 +175,8 @@ class _BelajarState extends State<Belajar> {
                   )),
             )
           ],
-        ));
+        )
+    );
   }
 
   void keMateriBP() {

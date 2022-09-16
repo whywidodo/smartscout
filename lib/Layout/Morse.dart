@@ -37,6 +37,7 @@ class _MorseState extends State<Morse> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -49,7 +50,7 @@ class _MorseState extends State<Morse> {
         elevation: 0.0,
         centerTitle: true,
         // title: Text(judulMorse, style: const TextStyle(fontFamily: 'PoppinsMedium')),
-        backgroundColor: warnaUngu,
+        backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -57,48 +58,15 @@ class _MorseState extends State<Morse> {
         child: Column(
           children: <Widget>[
             Container(
-                height: 200,
-                width: MediaQuery.of(context).size.width,
-                color: warnaUngu,
-                // padding: const EdgeInsets.only(top: 50),
-                child: Column(children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15.0),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                            'assets/images/bgMorse.png',
-                            width: 0.4 * MediaQuery.of(context).size.width,
-                            height: 120
-                        ),
-                        SizedBox(width: 0.05 * MediaQuery.of(context).size.width),
-                        Column(
-                          children: [
-                            Container(
-                              width: 0.4 * MediaQuery.of(context).size.width,
-                              child:
-                              Text(textSandiMorse,
-                                  style: TextStyle(
-                                      color: warnaPutih,
-                                      fontFamily: 'PoppinsMedium',
-                                      fontSize: ukFormTulisanPas)
-                              ),
-                            ),
-                            Container(
-                              width: 0.4 * MediaQuery.of(context).size.width,
-                              child:
-                              Text(dataTaglineAplikasi,
-                                  style: TextStyle(color: warnaPutih,
-                                      fontFamily: 'PoppinsRegular',
-                                      fontSize: ukFormTulisanDeskripsi)
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ])
+              padding: EdgeInsets.zero,
+              width: MediaQuery.of(context).size.width,
+              color: warnaUngu,
+              child: Image.asset(
+                  'assets/images/bgMorse.png',
+                  width: MediaQuery.of(context).size.width,
+                  height: 200,
+                  fit: BoxFit.fitWidth
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height,

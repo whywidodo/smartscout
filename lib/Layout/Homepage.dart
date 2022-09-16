@@ -6,7 +6,7 @@ import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
 import 'package:smartscout/Layout/Belajar.dart';
-import 'package:smartscout/Layout/Game/Soal1.dart';
+import 'package:smartscout/Layout/Game/MenuGame.dart';
 import 'package:smartscout/Layout/Morse.dart';
 import 'package:smartscout/Layout/Semaphore.dart';
 
@@ -294,7 +294,7 @@ class _HomepageState extends State<Homepage> {
 
   void _keGame(){
     // print("Ini akan mengalihkan ke Game");
-    Navigator.push(context,MaterialPageRoute(builder: (context) => Soal1()));
+    Navigator.push(context,MaterialPageRoute(builder: (context) => MenuGame()));
   }
 
   void _onItemTapped(int index) {
