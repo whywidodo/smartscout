@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
-import 'package:smartscout/Layout/Game/MenuGame.dart';
 
 import '../../Constant/Data.dart';
 import '../../Constant/Ukuran.dart';
@@ -26,7 +25,7 @@ class _KuisUmum2State extends State<KuisUmum2> {
           onPressed: () {
             Navigator.pop(context);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MenuGame()));
+                context, MaterialPageRoute(builder: (context) => KuisUmum1()));
             selectedIndex = 0;
           },
         ),
@@ -40,6 +39,12 @@ class _KuisUmum2State extends State<KuisUmum2> {
           Container(
             height: 250,
             decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(0.0),
+                bottomRight: Radius.circular(0.0),
+                topLeft: Radius.circular(0.0),
+                bottomLeft: Radius.circular(0.0),
+              ),
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -89,7 +94,7 @@ class _KuisUmum2State extends State<KuisUmum2> {
               margin:EdgeInsets.all(10),
               child: FloatingActionButton(
                 heroTag: Text(prevSoal2),
-                backgroundColor: warnaAbu,
+                backgroundColor: warnaUngu,
                 onPressed: (){
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => KuisUmum1()));
@@ -103,6 +108,7 @@ class _KuisUmum2State extends State<KuisUmum2> {
                 heroTag: Text(nextSoal2),
                 backgroundColor: warnaUngu,
                 onPressed: (){
+                  print(jawab2);
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => KuisUmum3()));
                 },
@@ -152,34 +158,34 @@ class _KuisUmum2State extends State<KuisUmum2> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5.0),
           child:
-          OutlinedButton(
-            child: Text(text),
-            style: OutlinedButton.styleFrom(
+          TextButton(
+            style: TextButton.styleFrom(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-              side: BorderSide(
-                  color: (valueSoal2 == index) ? warnaUngu  : warnaHitam,
-                  width: 0.5
+              shape: RoundedRectangleBorder(
+                  side: const BorderSide(
+                      color: warnaPurple700,
+                      width: 1.0,
+                      style: BorderStyle.solid
+                  ),
+                  borderRadius: BorderRadius.circular(20)
               ),
-              primary: (valueSoal2 == index) ? warnaUngu  : warnaHitam,
-              textStyle: TextStyle(
-                  color: (valueSoal2 == index) ? warnaUngu  : warnaHitam,
-                  fontSize: ukFormTulisanSedang,
-                  fontStyle: FontStyle.normal
-              ),
+              primary: (valueSoal2 == index) ? warnaPutih  : warnaPurple700,
+              backgroundColor: (valueSoal2 == index) ? warnaPurple700  : warnaPutih,
             ),
             onPressed: () {
               setState(() {
                 valueSoal2 = index;
-                if(valueSoal2 == 2){
+                if(valueSoal2 == 1){
                   jawab2 = 10;
                 }else{
                   jawab2 = 0;
                 }
               });
             },
+            child: Text(text),
           ),
         )
     );
   }
+
 }

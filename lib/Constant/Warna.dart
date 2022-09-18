@@ -18,6 +18,7 @@ const warnaOrange200 = Color(0xFFFFCC80);
 const warnaPink200 = Color(0xFFF48FB1);
 const warnaIndigo200 = Color(0xFF9FA8DA);
 const warnaPurple200 = Color(0xFFCE93D8);
+const warnaRed200 = Color(0xFFEF9A9A);
 
 const warnaGreen500 = Color(0xFF4CAF50);
 const warnaCyan500 = Color(0xFF00BCD4);
@@ -25,6 +26,7 @@ const warnaOrange500 = Color(0xFFFF9800);
 const warnaPink500 = Color(0xFFE91E63);
 const warnaIndigo500 = Color(0xFF3F51B5);
 const warnaPurple500 = Color(0xFF9C27B0);
+const warnaRed500 = Color(0xFFF44336);
 
 const warnaGreen700 = Color(0xFF388E3C);
 const warnaCyan700 = Color(0xFF0097A7);
@@ -32,3 +34,4 @@ const warnaOrange700 = Color(0xFFF57C00);
 const warnaPink700 = Color(0xFFC2185B);
 const warnaIndigo700 = Color(0xFF303F9F);
 const warnaPurple700 = Color(0xFF7B1FA2);
+const warnaRed700 = Color(0xFFD32F2F);

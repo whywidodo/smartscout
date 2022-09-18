@@ -1,21 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
+import 'package:smartscout/Layout/Game/Hasil.dart';
 
 import '../../Constant/Data.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
-import 'KuisUmum2.dart';
-import 'KuisUmum4.dart';
+import 'KuisUmum9.dart';
 
-class KuisUmum3 extends StatefulWidget {
-  const KuisUmum3({Key? key}) : super(key: key);
+class KuisUmum10 extends StatefulWidget {
+  const KuisUmum10({Key? key}) : super(key: key);
 
   @override
-  _KuisUmum3State createState() => _KuisUmum3State();
+  _KuisUmum10State createState() => _KuisUmum10State();
 }
 
-class _KuisUmum3State extends State<KuisUmum3> {
+class _KuisUmum10State extends State<KuisUmum10> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
           onPressed: () {
             Navigator.pop(context);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => KuisUmum2()));
+                context, MaterialPageRoute(builder: (context) => KuisUmum9()));
             selectedIndex = 0;
           },
         ),
@@ -56,7 +56,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
             Column(
               children: [
                 Center(
-                  child: Text(nomorSoalKuis3, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
+                  child: Text(nomorSoalKuis10, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
                 ),
                 Card(
                   color: warnaPutih,
@@ -65,7 +65,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        Text(soalKuis3, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                        Text(soalKuis10, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                       ],
                     ),
                   ),
@@ -78,10 +78,10 @@ class _KuisUmum3State extends State<KuisUmum3> {
           areaKlu(),
           Column(
             children: <Widget> [
-              CustomRadio(jawabanKuis3a, 1),
-              CustomRadio(jawabanKuis3b, 2),
-              CustomRadio(jawabanKuis3c, 3),
-              CustomRadio(jawabanKuis3d, 4),
+              CustomRadio(jawabanKuis10a, 1),
+              CustomRadio(jawabanKuis10b, 2),
+              CustomRadio(jawabanKuis10c, 3),
+              CustomRadio(jawabanKuis10d, 4),
             ],
           ),
 
@@ -93,11 +93,11 @@ class _KuisUmum3State extends State<KuisUmum3> {
           Container(
               margin:EdgeInsets.all(10),
               child: FloatingActionButton(
-                heroTag: Text(prevSoal2),
+                heroTag: Text(prevSoal9),
                 backgroundColor: warnaUngu,
                 onPressed: (){
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => KuisUmum2()));
+                      context, MaterialPageRoute(builder: (context) => KuisUmum9()));
                 },
                 child: Icon(Icons.navigate_before),
               )
@@ -105,14 +105,13 @@ class _KuisUmum3State extends State<KuisUmum3> {
           Container(
               margin:EdgeInsets.all(10),
               child: FloatingActionButton(
-                heroTag: Text(nextSoal4),
-                backgroundColor: warnaUngu,
+                heroTag: Text(nextFinishKU),
+                backgroundColor: warnaGreen700,
                 onPressed: (){
-                  print(jawab3);
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => KuisUmum4()));
+                  print(jawab10);
+                  keHasil();
                 },
-                child: Icon(Icons.navigate_next),
+                child: Icon(Icons.check),
               )
           )
         ],
@@ -134,7 +133,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      Text(kluKuis3, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                      Text(kluKuis10, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                     ],
                   ),
                 ),
@@ -169,16 +168,16 @@ class _KuisUmum3State extends State<KuisUmum3> {
                   ),
                   borderRadius: BorderRadius.circular(20)
               ),
-              primary: (valueSoal3 == index) ? warnaPutih  : warnaPurple700,
-              backgroundColor: (valueSoal3 == index) ? warnaPurple700  : warnaPutih,
+              primary: (valueSoal10 == index) ? warnaPutih  : warnaPurple700,
+              backgroundColor: (valueSoal10 == index) ? warnaPurple700  : warnaPutih,
             ),
             onPressed: () {
               setState(() {
-                valueSoal3 = index;
-                if(valueSoal3 == 1){
-                  jawab3 = 10;
+                valueSoal10 = index;
+                if(valueSoal10 == 1){
+                  jawab10 = 10;
                 }else{
-                  jawab3 = 0;
+                  jawab10 = 0;
                 }
               });
             },
@@ -188,4 +187,70 @@ class _KuisUmum3State extends State<KuisUmum3> {
     );
   }
 
+  void keHasil(){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            scrollable: true,
+            content: Column(
+              children: <Widget>[
+                Text(
+                  'Apakah kamu yakin ingin menyelesaikan kuis ini?',
+                  style: TextStyle(
+                      color: warnaHitam,
+                      fontFamily: 'PoppinsMedium',
+                      fontSize: ukFormTulisanKecil),
+                ),
+                const SizedBox(width: 10, height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(padding: EdgeInsets.all(5),
+                      child: Container(
+                          margin: const EdgeInsets.only(top: 10, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: warnaUngu),
+                              color: warnaPutih
+                          ),
+                          child: TextButton(
+                            style: ButtonStyle(
+                              foregroundColor: MaterialStateProperty.all<Color>(warnaUngu),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context, rootNavigator: true).pop();
+                            },
+                            child: Text('Tidak'),
+                          )
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(5),
+                      child: Container(
+                          margin: const EdgeInsets.only(top: 10, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: warnaUngu),
+                              color: warnaUngu
+                          ),
+                          child: TextButton(
+                            style: ButtonStyle(
+                              foregroundColor: MaterialStateProperty.all<Color>(warnaPutih),
+                            ),
+                            onPressed: () {
+                              hasilJawabKuis = jawab1 + jawab2 + jawab3 + jawab4 + jawab5 + jawab6 + jawab7 + jawab8 + jawab9 + jawab10;
+                              print(hasilJawabKuis);
+                              Navigator.pop(context);
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => Hasil()));
+                            },
+                            child: Text('Ya'),
+                          )
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          );
+        });
+  }
 }

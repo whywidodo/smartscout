@@ -38,6 +38,12 @@ class _KuisUmum1State extends State<KuisUmum1> {
           Container(
               height: 250,
               decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(0.0),
+                    bottomRight: Radius.circular(0.0),
+                    topLeft: Radius.circular(0.0),
+                    bottomLeft: Radius.circular(0.0),
+                ),
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -85,6 +91,7 @@ class _KuisUmum1State extends State<KuisUmum1> {
         child: const Icon(Icons.navigate_next),
         backgroundColor: warnaUngu,
         onPressed: (){
+          print(jawab1);
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => KuisUmum2()));
         },
@@ -114,6 +121,7 @@ class _KuisUmum1State extends State<KuisUmum1> {
               shadowColor: warnaHitam,
             ),
             const SizedBox(height: 10),
+
           ],
         )
       );
@@ -124,40 +132,40 @@ class _KuisUmum1State extends State<KuisUmum1> {
 
   Widget CustomRadio(String text, int index){
     return Container(
-      height: 0.07 * MediaQuery.of(context).size.height,
-      width: 0.8 * MediaQuery.of(context).size.width,
-      child:
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5.0),
+        height: 0.07 * MediaQuery.of(context).size.height,
+        width: 0.8 * MediaQuery.of(context).size.width,
         child:
-        OutlinedButton(
-          child: Text(text),
-          style: OutlinedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            side: BorderSide(
-                color: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
-                width: 0.5
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5.0),
+          child:
+          TextButton(
+            style: TextButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              shape: RoundedRectangleBorder(
+                  side: const BorderSide(
+                      color: warnaPurple700,
+                      width: 1.0,
+                      style: BorderStyle.solid
+                  ),
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              primary: (valueSoal1 == index) ? warnaPutih  : warnaPurple700,
+              backgroundColor: (valueSoal1 == index) ? warnaPurple700  : warnaPutih,
             ),
-            primary: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
-            textStyle: TextStyle(
-                color: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
-                fontSize: ukFormTulisanSedang,
-                fontStyle: FontStyle.normal
-            ),
+            onPressed: () {
+              setState(() {
+                valueSoal1 = index;
+                if(valueSoal1 == 1){
+                  jawab1 = 10;
+                }else{
+                  jawab1 = 0;
+                }
+              });
+            },
+            child: Text(text),
           ),
-          onPressed: () {
-            setState(() {
-              valueSoal1 = index;
-              if(valueSoal1 == 1){
-                jawab1 = 10;
-              }else{
-                jawab1 = 0;
-              }
-            });
-          },
-        ),
-      )
+        )
     );
   }
+
 }

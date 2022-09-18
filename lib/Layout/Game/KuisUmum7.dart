@@ -5,17 +5,17 @@ import 'package:smartscout/Constant/DataSoalKuis.dart';
 import '../../Constant/Data.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
-import 'KuisUmum2.dart';
-import 'KuisUmum4.dart';
+import 'KuisUmum6.dart';
+import 'KuisUmum8.dart';
 
-class KuisUmum3 extends StatefulWidget {
-  const KuisUmum3({Key? key}) : super(key: key);
+class KuisUmum7 extends StatefulWidget {
+  const KuisUmum7({Key? key}) : super(key: key);
 
   @override
-  _KuisUmum3State createState() => _KuisUmum3State();
+  _KuisUmum7State createState() => _KuisUmum7State();
 }
 
-class _KuisUmum3State extends State<KuisUmum3> {
+class _KuisUmum7State extends State<KuisUmum7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
           onPressed: () {
             Navigator.pop(context);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => KuisUmum2()));
+                context, MaterialPageRoute(builder: (context) => KuisUmum6()));
             selectedIndex = 0;
           },
         ),
@@ -56,7 +56,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
             Column(
               children: [
                 Center(
-                  child: Text(nomorSoalKuis3, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
+                  child: Text(nomorSoalKuis7, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
                 ),
                 Card(
                   color: warnaPutih,
@@ -65,7 +65,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        Text(soalKuis3, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                        Text(soalKuis7, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                       ],
                     ),
                   ),
@@ -78,10 +78,10 @@ class _KuisUmum3State extends State<KuisUmum3> {
           areaKlu(),
           Column(
             children: <Widget> [
-              CustomRadio(jawabanKuis3a, 1),
-              CustomRadio(jawabanKuis3b, 2),
-              CustomRadio(jawabanKuis3c, 3),
-              CustomRadio(jawabanKuis3d, 4),
+              CustomRadio(jawabanKuis7a, 1),
+              CustomRadio(jawabanKuis7b, 2),
+              CustomRadio(jawabanKuis7c, 3),
+              CustomRadio(jawabanKuis7d, 4),
             ],
           ),
 
@@ -93,11 +93,11 @@ class _KuisUmum3State extends State<KuisUmum3> {
           Container(
               margin:EdgeInsets.all(10),
               child: FloatingActionButton(
-                heroTag: Text(prevSoal2),
+                heroTag: Text(prevSoal6),
                 backgroundColor: warnaUngu,
                 onPressed: (){
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => KuisUmum2()));
+                      context, MaterialPageRoute(builder: (context) => KuisUmum6()));
                 },
                 child: Icon(Icons.navigate_before),
               )
@@ -105,12 +105,12 @@ class _KuisUmum3State extends State<KuisUmum3> {
           Container(
               margin:EdgeInsets.all(10),
               child: FloatingActionButton(
-                heroTag: Text(nextSoal4),
+                heroTag: Text(nextSoal8),
                 backgroundColor: warnaUngu,
                 onPressed: (){
-                  print(jawab3);
+                  print(jawab7);
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => KuisUmum4()));
+                      context, MaterialPageRoute(builder: (context) => KuisUmum8()));
                 },
                 child: Icon(Icons.navigate_next),
               )
@@ -134,7 +134,7 @@ class _KuisUmum3State extends State<KuisUmum3> {
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      Text(kluKuis3, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                      Text(kluKuis7, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                     ],
                   ),
                 ),
@@ -169,16 +169,16 @@ class _KuisUmum3State extends State<KuisUmum3> {
                   ),
                   borderRadius: BorderRadius.circular(20)
               ),
-              primary: (valueSoal3 == index) ? warnaPutih  : warnaPurple700,
-              backgroundColor: (valueSoal3 == index) ? warnaPurple700  : warnaPutih,
+              primary: (valueSoal7 == index) ? warnaPutih  : warnaPurple700,
+              backgroundColor: (valueSoal7 == index) ? warnaPurple700  : warnaPutih,
             ),
             onPressed: () {
               setState(() {
-                valueSoal3 = index;
-                if(valueSoal3 == 1){
-                  jawab3 = 10;
+                valueSoal7 = index;
+                if(valueSoal7 == 1){
+                  jawab7 = 10;
                 }else{
-                  jawab3 = 0;
+                  jawab7 = 0;
                 }
               });
             },

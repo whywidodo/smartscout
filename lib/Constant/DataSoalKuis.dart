@@ -20,6 +20,8 @@ int jawab8 = 0;
 int jawab9 = 0;
 int jawab10 = 0;
 
+int hasilJawabKuis = 0;
+
 var nextSoal1 = "NextSoal1";
 var nextSoal2 = "NextSoal2";
 var nextSoal3 = "NextSoal3";
@@ -30,6 +32,7 @@ var nextSoal7 = "NextSoal7";
 var nextSoal8 = "NextSoal8";
 var nextSoal9 = "NextSoal9";
 var nextSoal10 = "NextSoal10";
+var nextFinishKU = "NextFinishKuisUmum";
 
 var prevSoal1 = "PrevSoal1";
 var prevSoal2 = "PrevSoal2";
@@ -66,3 +69,58 @@ var jawabanKuis3b = "14 Septemberrrr";
 var jawabanKuis3c = "14 Oktoberrrr";
 var jawabanKuis3d = "14 Desemberrrr";
 
+var nomorSoalKuis4 = "Soal 4";
+var soalKuis4 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis4 = "-";
+var jawabanKuis4a = "14 Agustusss";
+var jawabanKuis4b = "14 Septemberrrr";
+var jawabanKuis4c = "14 Oktoberrrr";
+var jawabanKuis4d = "14 Desemberrrr";
+
+var nomorSoalKuis5 = "Soal 5";
+var soalKuis5 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis5 = "-";
+var jawabanKuis5a = "14 Agustusss";
+var jawabanKuis5b = "14 Septemberrrr";
+var jawabanKuis5c = "14 Oktoberrrr";
+var jawabanKuis5d = "14 Desemberrrr";
+
+var nomorSoalKuis6 = "Soal 6";
+var soalKuis6 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis6 = "-";
+var jawabanKuis6a = "14 Agustusss";
+var jawabanKuis6b = "14 Septemberrrr";
+var jawabanKuis6c = "14 Oktoberrrr";
+var jawabanKuis6d = "14 Desemberrrr";
+
+var nomorSoalKuis7 = "Soal 7";
+var soalKuis7 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis7 = "-";
+var jawabanKuis7a = "14 Agustusss";
+var jawabanKuis7b = "14 Septemberrrr";
+var jawabanKuis7c = "14 Oktoberrrr";
+var jawabanKuis7d = "14 Desemberrrr";
+
+var nomorSoalKuis8 = "Soal 8";
+var soalKuis8 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis8 = "-";
+var jawabanKuis8a = "14 Agustusss";
+var jawabanKuis8b = "14 Septemberrrr";
+var jawabanKuis8c = "14 Oktoberrrr";
+var jawabanKuis8d = "14 Desemberrrr";
+
+var nomorSoalKuis9 = "Soal 9";
+var soalKuis9 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis9 = "-";
+var jawabanKuis9a = "14 Agustusss";
+var jawabanKuis9b = "14 Septemberrrr";
+var jawabanKuis9c = "14 Oktoberrrr";
+var jawabanKuis9d = "14 Desemberrrr";
+
+var nomorSoalKuis10 = "Soal 10";
+var soalKuis10 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var kluKuis10 = "-";
+var jawabanKuis10a = "14 Agustusss";
+var jawabanKuis10b = "14 Septemberrrr";
+var jawabanKuis10c = "14 Oktoberrrr";
+var jawabanKuis10d = "14 Desemberrrr";
