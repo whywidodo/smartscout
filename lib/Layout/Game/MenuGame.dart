@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Layout/Game/KuisUmum1.dart';
-import 'package:smartscout/Widget/DiagonalShape.dart';
 import 'package:smartscout/Widget/WaveShape.dart';
 
 import '../../Constant/Ukuran.dart';
@@ -34,22 +33,43 @@ class _MenuGameState extends State<MenuGame> {
           //   style: const TextStyle(fontFamily: 'PoppinsMedium'),
           // ),
           elevation: 0.0,
-          toolbarHeight: 100,
+          // toolbarHeight: 100,
           backgroundColor: Colors.transparent,
-          flexibleSpace: ClipPath(
-            clipper: DiagonalShape(),
-            child: Container(
-              height: 240,
-              width: MediaQuery.of(context).size.width,
-              color: warnaUngu,
-              child: Center(
-                  child: Text(gameMenu,
-                      style: TextStyle(
-                          fontSize: ukFormTulisanSedang,
-                          color: Colors.white,
-                          fontFamily: 'PoppinsMedium'))),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [ warnaUngu, warnaPurple700, warnaPurple500],
+              ),
             ),
+            child: Center(
+                child: Text(gameMenu,
+                    style: TextStyle(
+                        fontSize: ukFormTulisanSedang,
+                        color: Colors.white,
+                        fontFamily: 'PoppinsMedium'))),
           ),
+          // flexibleSpace: ClipPath(
+          //   clipper: DiagonalShape(),
+          //   child: Container(
+          //     height: 240,
+          //     width: MediaQuery.of(context).size.width,
+          //     decoration: const BoxDecoration(
+          //       gradient: LinearGradient(
+          //         begin: Alignment.centerLeft,
+          //         end: Alignment.centerRight,
+          //         colors: [ warnaUngu, warnaPurple500],
+          //       ),
+          //     ),
+          //     child: Center(
+          //         child: Text(gameMenu,
+          //             style: TextStyle(
+          //                 fontSize: ukFormTulisanSedang,
+          //                 color: Colors.white,
+          //                 fontFamily: 'PoppinsMedium'))),
+          //   ),
+          // ),
         ),
         body: ListView(
           children: [
@@ -63,7 +83,11 @@ class _MenuGameState extends State<MenuGame> {
                   padding: EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
-                          color: warnaGreen500,
+                          gradient: const LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [ warnaGreen700, warnaGreen500],
+                          ),
                           border: Border.all(color: warnaAbu),
                           borderRadius: BorderRadius.circular(15)),
                       padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -110,7 +134,12 @@ class _MenuGameState extends State<MenuGame> {
                   padding: EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
-                          color: warnaIndigo500,
+                          // color: warnaIndigo500,
+                          gradient: const LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [ warnaIndigo700, warnaIndigo500],
+                          ),
                           border: Border.all(color: warnaAbu),
                           borderRadius: BorderRadius.circular(15)),
                       padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -157,7 +186,12 @@ class _MenuGameState extends State<MenuGame> {
                   padding: EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
-                          color: warnaCyan500,
+                          // color: warnaCyan500,
+                          gradient: const LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [ warnaCyan700, warnaCyan500],
+                          ),
                           border: Border.all(color: warnaAbu),
                           borderRadius: BorderRadius.circular(15)),
                       padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -202,7 +236,7 @@ class _MenuGameState extends State<MenuGame> {
   }
   void keKuisUmum() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Soal1()));
+        context, MaterialPageRoute(builder: (context) => KuisUmum1()));
   }
 
   BottomAppBar getNavBar(context){
@@ -210,9 +244,9 @@ class _MenuGameState extends State<MenuGame> {
       elevation: 0,
       color: Colors.transparent,
       child: ClipPath(
-        clipper: WaveShape(reverse: true),
+        clipper: WaveShape(reverse: true, flip: true),
         child: Container(
-          height: 40,
+          height: 50,
           width: MediaQuery.of(context).size.width,
           color: warnaUngu
         ),

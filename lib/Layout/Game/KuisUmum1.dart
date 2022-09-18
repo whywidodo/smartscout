@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:smartscout/Constant/DataSoalKuis.dart';
 import 'package:smartscout/Layout/Game/MenuGame.dart';
 
 import '../../Constant/Data.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
+import 'KuisUmum2.dart';
 
-class Soal1 extends StatefulWidget {
-  const Soal1({Key? key}) : super(key: key);
+class KuisUmum1 extends StatefulWidget {
+  const KuisUmum1({Key? key}) : super(key: key);
 
   @override
-  _Soal1State createState() => _Soal1State();
+  _KuisUmum1State createState() => _KuisUmum1State();
 }
 
-class _Soal1State extends State<Soal1> {
+class _KuisUmum1State extends State<KuisUmum1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,22 +37,28 @@ class _Soal1State extends State<Soal1> {
         children: [
           Container(
               height: 250,
-              color: warnaUngu,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [ warnaUngu, warnaPurple700],
+                ),
+              ),
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child:
               Column(
                 children: [
                   Center(
-                    child: Text("Soal 1", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
+                    child: Text(nomorSoalKuis1, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanSedang, fontWeight: FontWeight.bold)),
                   ),
                   Card(
                     color: warnaPutih,
-                    margin: EdgeInsets.all(5.0),
+                    margin: const EdgeInsets.all(5.0),
                     child: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                          Text(soalKuis1, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                         ],
                       ),
                     ),
@@ -60,53 +68,72 @@ class _Soal1State extends State<Soal1> {
                 ],
               ),
           ),
-          Card(
-            margin: EdgeInsets.all(5.0),
-            child: Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
-                ],
-              ),
-            ),
-            elevation: 2,
-            shadowColor: warnaHitam,
-          ),
-          const SizedBox(height: 10),
+          areaKlu(),
           Column(
             children: <Widget> [
-              CustomRadio("14 Agustus", 1),
-              CustomRadio("14 September", 2),
-              CustomRadio("14 Oktober", 3),
-              CustomRadio("14 November", 4),
+              CustomRadio(jawabanKuis1a, 1),
+              CustomRadio(jawabanKuis1b, 2),
+              CustomRadio(jawabanKuis1c, 3),
+              CustomRadio(jawabanKuis1d, 4),
             ],
           ),
 
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.navigate_next),
+        heroTag: Text(nextSoal1),
+        child: const Icon(Icons.navigate_next),
         backgroundColor: warnaUngu,
         onPressed: (){
-          // print("Berikutnya");
-          print(valueSoal1);
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => KuisUmum2()));
         },
       ),
     );
   }
 
+  Widget areaKlu(){
+    if(kluKuis1 != "-"){
+      return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Card(
+              margin: const EdgeInsets.all(5.0),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    Text(kluKuis1, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                  ],
+                ),
+              ),
+              elevation: 2,
+              shadowColor: warnaHitam,
+            ),
+            const SizedBox(height: 10),
+          ],
+        )
+      );
+    }else{
+      return const SizedBox(height: 10);
+    }
+  }
+
   Widget CustomRadio(String text, int index){
     return Container(
-      height: 0.05 * MediaQuery.of(context).size.height,
+      height: 0.07 * MediaQuery.of(context).size.height,
       width: 0.8 * MediaQuery.of(context).size.width,
       child:
       Padding(
-        padding: EdgeInsets.symmetric(vertical: 2.0),
-        child: OutlinedButton(
+        padding: const EdgeInsets.symmetric(vertical: 5.0),
+        child:
+        OutlinedButton(
           child: Text(text),
           style: OutlinedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 8.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             side: BorderSide(
                 color: (valueSoal1 == index) ? warnaUngu  : warnaHitam,
@@ -122,6 +149,11 @@ class _Soal1State extends State<Soal1> {
           onPressed: () {
             setState(() {
               valueSoal1 = index;
+              if(valueSoal1 == 1){
+                jawab1 = 10;
+              }else{
+                jawab1 = 0;
+              }
             });
           },
         ),

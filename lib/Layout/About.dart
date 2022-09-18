@@ -36,7 +36,13 @@ class _AboutState extends State<About> {
         children: [
           Container(
               height: 300,
-              color: warnaUngu,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [ warnaUngu, warnaPurple700],
+                ),
+              ),
               padding: const EdgeInsets.only(top: 50),
               child: Column(children: [
                 Image.asset('assets/images/smartscout.png', width: 100, height: 100),

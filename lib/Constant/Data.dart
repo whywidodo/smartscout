@@ -34,8 +34,6 @@ var gameKuis = "Kuis Umum";
 var gameDragDrop = "Cocokan Gambar";
 var gameTebak = "Tebak Gambar";
 
-int valueSoal1 = 0;
-
 List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 List<String> hurufMorse = [".-", "-...", "-.-.", "-..", ".","..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",

@@ -29,11 +29,26 @@ class _BelajarState extends State<Belajar> {
             },
           ),
           centerTitle: true,
-          title: Text(
-            judulPengetahuan,
-            style: const TextStyle(fontFamily: 'PoppinsMedium'),
+          // title: Text(
+          //   judulPengetahuan,
+          //   style: const TextStyle(fontFamily: 'PoppinsMedium'),
+          // ),
+          // backgroundColor: warnaUngu,
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [ warnaUngu, warnaPurple700, warnaPurple500],
+              ),
+            ),
+            child: Center(
+                child: Text(judulPengetahuan,
+                    style: TextStyle(
+                        fontSize: ukFormTulisanSedang,
+                        color: Colors.white,
+                        fontFamily: 'PoppinsMedium'))),
           ),
-          backgroundColor: warnaUngu,
         ),
         body: ListView(
           children: [

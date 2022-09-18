@@ -25,3 +25,10 @@ const warnaOrange500 = Color(0xFFFF9800);
 const warnaPink500 = Color(0xFFE91E63);
 const warnaIndigo500 = Color(0xFF3F51B5);
 const warnaPurple500 = Color(0xFF9C27B0);
+
+const warnaGreen700 = Color(0xFF388E3C);
+const warnaCyan700 = Color(0xFF0097A7);
+const warnaOrange700 = Color(0xFFF57C00);
+const warnaPink700 = Color(0xFFC2185B);
+const warnaIndigo700 = Color(0xFF303F9F);
+const warnaPurple700 = Color(0xFF7B1FA2);
