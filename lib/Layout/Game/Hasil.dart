@@ -6,9 +6,6 @@ import 'package:smartscout/Layout/Homepage.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
 
-var hasilBenar = hasilJawabKuis / 10;
-var hasilSalah = 10 - hasilBenar;
-
 class Hasil extends StatefulWidget {
   const Hasil({Key? key}) : super(key: key);
 
@@ -49,7 +46,7 @@ class _HasilState extends State<Hasil> {
                           top: 30, bottom: 10, left: 10, right: 10),
                       child: Container(
                         width: 0.8 * MediaQuery.of(context).size.width,
-                        height: 0.3 * MediaQuery.of(context).size.height,
+                        height: 0.4 * MediaQuery.of(context).size.height,
                         child: Column(
                           children: [
                             Text("Hasil Test\n",
@@ -99,7 +96,7 @@ class _HasilState extends State<Hasil> {
                                               ),
                                               child: Center(
                                                   child: Text(
-                                                      hasilBenar.toString(),
+                                                      hasilBenar.toInt().toString(),
                                                       style: TextStyle(
                                                           color: warnaPutih,
                                                           fontFamily:
@@ -120,7 +117,7 @@ class _HasilState extends State<Hasil> {
                                               ),
                                               child: Center(
                                                   child: Text(
-                                                      hasilSalah.toString(),
+                                                      hasilSalah.toInt().toString(),
                                                       style: TextStyle(
                                                           color: warnaPutih,
                                                           fontFamily:
@@ -162,6 +159,8 @@ class _HasilState extends State<Hasil> {
                 InkWell(
                   onTap: () {
                     keHomepage();
+                    hasilBenar = 0;
+                    hasilSalah = 0;
                   },
                   child: Container(
                       height: 50,

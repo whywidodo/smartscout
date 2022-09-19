@@ -21,6 +21,8 @@ int jawab9 = 0;
 int jawab10 = 0;
 
 int hasilJawabKuis = 0;
+double hasilBenar = 0;
+double hasilSalah = 0;
 
 var nextSoal1 = "NextSoal1";
 var nextSoal2 = "NextSoal2";

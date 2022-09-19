@@ -237,6 +237,8 @@ class _KuisUmum10State extends State<KuisUmum10> {
                             ),
                             onPressed: () {
                               hasilJawabKuis = jawab1 + jawab2 + jawab3 + jawab4 + jawab5 + jawab6 + jawab7 + jawab8 + jawab9 + jawab10;
+                              hasilBenar = hasilJawabKuis / 10;
+                              hasilSalah = 10 - hasilBenar;
                               print(hasilJawabKuis);
                               Navigator.pop(context);
                               Navigator.push(

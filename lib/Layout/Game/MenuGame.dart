@@ -44,28 +44,13 @@ class _MenuGameState extends State<MenuGame> {
                 colors: [ warnaUngu, warnaPurple700, warnaPurple500],
               ),
             ),
-            // child: Center(
-            //     child: Text(gameMenu,
-            //         style: TextStyle(
-            //             fontSize: ukFormTulisanSedang,
-            //             color: Colors.white,
-            //             fontFamily: 'PoppinsMedium'))),
           ),
         ),
         body: ListView(
           children: [
             InkWell(
               onTap: () {
-                valueSoal1 = 0;
-                valueSoal2 = 0;
-                valueSoal3 = 0;
-                valueSoal4 = 0;
-                valueSoal5 = 0;
-                valueSoal6 = 0;
-                valueSoal7 = 0;
-                valueSoal8 = 0;
-                valueSoal9 = 0;
-                valueSoal10 = 0;
+                resetNilai();
                 keKuisUmum();
               },
               child:
@@ -242,6 +227,30 @@ class _MenuGameState extends State<MenuGame> {
         ),
       ),
     );
+  }
+
+  void resetNilai(){
+    valueSoal1 = 0;
+    valueSoal2 = 0;
+    valueSoal3 = 0;
+    valueSoal4 = 0;
+    valueSoal5 = 0;
+    valueSoal6 = 0;
+    valueSoal7 = 0;
+    valueSoal8 = 0;
+    valueSoal9 = 0;
+    valueSoal10 = 0;
+    jawab1 = 0;
+    jawab2 = 0;
+    jawab3 = 0;
+    jawab4 = 0;
+    jawab5 = 0;
+    jawab6 = 0;
+    jawab7 = 0;
+    jawab8 = 0;
+    jawab9 = 0;
+    jawab10 = 0;
+    hasilJawabKuis = 0;
   }
 
 }
