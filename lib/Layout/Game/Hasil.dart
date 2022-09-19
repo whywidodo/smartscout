@@ -80,22 +80,6 @@ class _HasilState extends State<Hasil> {
                                         color: warnaHitam,
                                         fontSize: ukFormTulisanKecil),
                                   ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        "Benar",
-                                        style: TextStyle(
-                                            color: warnaHitam,
-                                            fontSize: ukIsiTulisanKecil),
-                                      ),
-                                      Text(
-                                        "Salah",
-                                        style: TextStyle(
-                                            color: warnaHitam,
-                                            fontSize: ukIsiTulisanKecil),
-                                      ),
-                                    ],
-                                  )
                                 ],
                               ),
                             )
