@@ -6,6 +6,9 @@ import 'package:smartscout/Layout/Homepage.dart';
 import '../../Constant/Ukuran.dart';
 import '../../Constant/Warna.dart';
 
+var hasilBenar = hasilJawabKuis / 10;
+var hasilSalah = 10 - hasilBenar;
+
 class Hasil extends StatefulWidget {
   const Hasil({Key? key}) : super(key: key);
 
@@ -67,11 +70,11 @@ class _HasilState extends State<Hasil> {
                                 hasilJawabKuis.toString(),
                                 style: TextStyle(
                                     color: warnaHitam,
-                                    fontSize: ukFormTulisanKecil),
+                                    fontSize: ukFormTulisanBesar),
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(top: 20.0),
+                              padding: EdgeInsets.only(top: 30.0),
                               child: Column(
                                 children: [
                                   Text(
@@ -80,6 +83,72 @@ class _HasilState extends State<Hasil> {
                                         color: warnaHitam,
                                         fontSize: ukFormTulisanKecil),
                                   ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              height: 40,
+                                              width: 40,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                    width: 1,
+                                                    color: warnaPutih),
+                                                color: Colors.green,
+                                              ),
+                                              child: Center(
+                                                  child: Text(
+                                                      hasilBenar.toString(),
+                                                      style: TextStyle(
+                                                          color: warnaPutih,
+                                                          fontFamily:
+                                                              'PoppinsMedium',
+                                                          fontSize:
+                                                              ukFormTulisanKecil)))),
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              height: 40,
+                                              width: 40,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                    width: 1,
+                                                    color: warnaPutih),
+                                                color: Colors.red,
+                                              ),
+                                              child: Center(
+                                                  child: Text(
+                                                      hasilSalah.toString(),
+                                                      style: TextStyle(
+                                                          color: warnaPutih,
+                                                          fontFamily:
+                                                              'PoppinsMedium',
+                                                          fontSize:
+                                                              ukFormTulisanKecil)))),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                          child:
+                                          Center(
+                                      child: Text("Benar",
+                                          style: TextStyle(
+                                              fontSize: ukIsiTulisanKecil))),
+                                  ),
+                                      Expanded(
+                                        child:
+                                        Center(
+                                            child: Text("Salah",
+                                                style: TextStyle(
+                                                    fontSize: ukIsiTulisanKecil))),
+                                      ),
+                                    ],
+                                  )
                                 ],
                               ),
                             )
