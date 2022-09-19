@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
+import 'package:smartscout/Constant/DataSoalKuis.dart';
 import 'package:smartscout/Layout/Game/KuisUmum1.dart';
 import 'package:smartscout/Widget/WaveShape.dart';
 
@@ -28,10 +29,10 @@ class _MenuGameState extends State<MenuGame> {
             },
           ),
           centerTitle: true,
-          // title: Text(
-          //   gameMenu,
-          //   style: const TextStyle(fontFamily: 'PoppinsMedium'),
-          // ),
+          title: Text(
+            gameMenu,
+            style: TextStyle(fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanSedang, color: warnaPutih),
+          ),
           elevation: 0.0,
           // toolbarHeight: 100,
           backgroundColor: Colors.transparent,
@@ -43,39 +44,28 @@ class _MenuGameState extends State<MenuGame> {
                 colors: [ warnaUngu, warnaPurple700, warnaPurple500],
               ),
             ),
-            child: Center(
-                child: Text(gameMenu,
-                    style: TextStyle(
-                        fontSize: ukFormTulisanSedang,
-                        color: Colors.white,
-                        fontFamily: 'PoppinsMedium'))),
+            // child: Center(
+            //     child: Text(gameMenu,
+            //         style: TextStyle(
+            //             fontSize: ukFormTulisanSedang,
+            //             color: Colors.white,
+            //             fontFamily: 'PoppinsMedium'))),
           ),
-          // flexibleSpace: ClipPath(
-          //   clipper: DiagonalShape(),
-          //   child: Container(
-          //     height: 240,
-          //     width: MediaQuery.of(context).size.width,
-          //     decoration: const BoxDecoration(
-          //       gradient: LinearGradient(
-          //         begin: Alignment.centerLeft,
-          //         end: Alignment.centerRight,
-          //         colors: [ warnaUngu, warnaPurple500],
-          //       ),
-          //     ),
-          //     child: Center(
-          //         child: Text(gameMenu,
-          //             style: TextStyle(
-          //                 fontSize: ukFormTulisanSedang,
-          //                 color: Colors.white,
-          //                 fontFamily: 'PoppinsMedium'))),
-          //   ),
-          // ),
         ),
         body: ListView(
           children: [
             InkWell(
               onTap: () {
-                // print("keKuisUmum");
+                valueSoal1 = 0;
+                valueSoal2 = 0;
+                valueSoal3 = 0;
+                valueSoal4 = 0;
+                valueSoal5 = 0;
+                valueSoal6 = 0;
+                valueSoal7 = 0;
+                valueSoal8 = 0;
+                valueSoal9 = 0;
+                valueSoal10 = 0;
                 keKuisUmum();
               },
               child:
@@ -231,7 +221,7 @@ class _MenuGameState extends State<MenuGame> {
             ),
           ],
         ),
-      bottomNavigationBar: getNavBar(context),
+        bottomNavigationBar: getNavBar(context),
     );
   }
   void keKuisUmum() {

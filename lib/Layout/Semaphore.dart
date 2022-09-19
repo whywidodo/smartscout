@@ -29,9 +29,8 @@ class _SemaphoreState extends State<Semaphore> {
           },
         ),
         centerTitle: true,
-        // title: Text(judulSemaphore, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
-        // backgroundColor: warnaUngu,
-        // foregroundColor: warnaPutih,
+        title: Text(judulSemaphore, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
+        backgroundColor: Colors.transparent,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -40,12 +39,6 @@ class _SemaphoreState extends State<Semaphore> {
               colors: [ warnaUngu, warnaPurple700, warnaPurple500],
             ),
           ),
-          child: Center(
-              child: Text(judulSemaphore,
-                  style: TextStyle(
-                      fontSize: ukFormTulisanSedang,
-                      color: Colors.white,
-                      fontFamily: 'PoppinsMedium'))),
         ),
       ),
       body: Padding(

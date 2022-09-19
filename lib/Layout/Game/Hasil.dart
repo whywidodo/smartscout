@@ -36,7 +36,7 @@ class _HasilState extends State<Hasil> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(
               children: [
                 Card(
@@ -48,8 +48,8 @@ class _HasilState extends State<Hasil> {
                       padding: EdgeInsets.only(
                           top: 30, bottom: 10, left: 10, right: 10),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 0.5 * MediaQuery.of(context).size.height,
+                        width: 0.8 * MediaQuery.of(context).size.width,
+                        height: 0.3 * MediaQuery.of(context).size.height,
                         child: Column(
                           children: [
                             Text("Hasil Test\n",

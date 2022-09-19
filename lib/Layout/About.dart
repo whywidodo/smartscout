@@ -45,7 +45,7 @@ class _AboutState extends State<About> {
               ),
               padding: const EdgeInsets.only(top: 50),
               child: Column(children: [
-                Image.asset('assets/images/smartscout.png', width: 100, height: 100),
+                Image.asset('assets/images/icons/sscwhite.png', width: 100, height: 100),
                 Text(dataNamaAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanBesar)),
                 Text(dataTaglineAplikasi, style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
                 Text(dataVersiAplikasi, style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),

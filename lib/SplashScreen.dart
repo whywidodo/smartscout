@@ -28,6 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.white,
       body: Center(
           child: Column(
@@ -35,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                "assets/images/smartscout.png",
+                "assets/images/icons/sscpurpletitle.png",
                 width: 150,
                 height: 150,
               ),

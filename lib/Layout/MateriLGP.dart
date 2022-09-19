@@ -17,6 +17,8 @@ class _MateriLGPState extends State<MateriLGP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -28,21 +30,16 @@ class _MateriLGPState extends State<MateriLGP> {
           },
         ),
         centerTitle: true,
-        elevation: 0.0,
-        toolbarHeight: 100,
+        elevation: 1.0,
+        title: Text(judulLambang, style: TextStyle(fontFamily: 'PoppinsRegular', fontSize: ukFormTulisanSedang)),
         backgroundColor: Colors.transparent,
-        flexibleSpace: ClipPath(
-          clipper: WaveShape(),
-          child: Container(
-            height: 240,
-            width: MediaQuery.of(context).size.width,
-            color: warnaUngu,
-            child: Center(
-                child: Text(judulLambang,
-                    style: TextStyle(
-                        fontSize: ukFormTulisanSedang,
-                        color: Colors.white,
-                        fontFamily: 'PoppinsMedium'))),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [ warnaUngu, warnaPurple700, warnaPurple500],
+            ),
           ),
         ),
       ),
@@ -82,6 +79,27 @@ class _MateriLGPState extends State<MateriLGP> {
                     ],
                   ))),
         ],
+      ),
+      bottomNavigationBar: getNavBar(context),
+    );
+  }
+  BottomAppBar getNavBar(context){
+    return BottomAppBar(
+      elevation: 0,
+      color: Colors.transparent,
+      child: ClipPath(
+        clipper: WaveShape(reverse: true, flip: true),
+        child: Container(
+          height: 50,
+          width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [ warnaUngu, warnaPurple700, warnaPurple500],
+            ),
+          ),
+        ),
       ),
     );
   }

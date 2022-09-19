@@ -29,11 +29,11 @@ class _BelajarState extends State<Belajar> {
             },
           ),
           centerTitle: true,
-          // title: Text(
-          //   judulPengetahuan,
-          //   style: const TextStyle(fontFamily: 'PoppinsMedium'),
-          // ),
-          // backgroundColor: warnaUngu,
+          title: Text(
+            judulPengetahuan,
+            style: TextStyle(fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanSedang, color: warnaPutih),
+          ),
+          backgroundColor: Colors.transparent,
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -42,12 +42,6 @@ class _BelajarState extends State<Belajar> {
                 colors: [ warnaUngu, warnaPurple700, warnaPurple500],
               ),
             ),
-            child: Center(
-                child: Text(judulPengetahuan,
-                    style: TextStyle(
-                        fontSize: ukFormTulisanSedang,
-                        color: Colors.white,
-                        fontFamily: 'PoppinsMedium'))),
           ),
         ),
         body: ListView(
