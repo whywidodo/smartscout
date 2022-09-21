@@ -56,73 +56,78 @@ var jawabanKuis1c = "14 Oktober";
 var jawabanKuis1d = "14 Desember";
 
 var nomorSoalKuis2 = "Soal 2";
-var soalKuis2 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis2 = "Apa makna kode kehormatan Dwidarma bagi pramuka siaga?";
 var kluKuis2 = "-";
-var jawabanKuis2a = "14 Agustusss";
-var jawabanKuis2b = "14 Septemberrrr";
-var jawabanKuis2c = "14 Oktoberrrr";
-var jawabanKuis2d = "14 Desemberrrr";
+var jawabanKuis2a = "Mencari jati diri";
+var jawabanKuis2b = "komitmen diri";
+var jawabanKuis2c = "Janji dan komitmen diri";
+var jawabanKuis2d = "Ketentuan moral";
 
 var nomorSoalKuis3 = "Soal 3";
-var soalKuis3 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis3 = "Robert Stephenson Smyth Baden Powell atau dikenal sebagai Bapak "
+    "Pandu Dunia, merupakan tokoh besar dalam gerakan kepanduan, ia sempat "
+    "berkeliling dunia sebelum akhirnya meninggal dunia, pada tanggal berapakah "
+    "ia mengunjungi Batavia / Jakarta?";
 var kluKuis3 = "-";
-var jawabanKuis3a = "14 Agustusss";
-var jawabanKuis3b = "14 Septemberrrr";
-var jawabanKuis3c = "14 Oktoberrrr";
-var jawabanKuis3d = "14 Desemberrrr";
+var jawabanKuis3a = "3 November 1934";
+var jawabanKuis3b = "3 November 1935";
+var jawabanKuis3c = "3 Desember 1934";
+var jawabanKuis3d = "3 Desember 1935";
 
 var nomorSoalKuis4 = "Soal 4";
-var soalKuis4 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis4 = "Cinta alam dan kasih sayang sesama manusia, merupakan poin Dasadarma keberapa?";
 var kluKuis4 = "-";
-var jawabanKuis4a = "14 Agustusss";
-var jawabanKuis4b = "14 Septemberrrr";
-var jawabanKuis4c = "14 Oktoberrrr";
-var jawabanKuis4d = "14 Desemberrrr";
+var jawabanKuis4a = "Satu";
+var jawabanKuis4b = "Dua";
+var jawabanKuis4c = "Tiga";
+var jawabanKuis4d = "Empat";
 
 var nomorSoalKuis5 = "Soal 5";
-var soalKuis5 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis5 = "Jenis kode kehormatan dibagi menjadi 3 yang digolongkan "
+    "berdasarkan usia, apa sajakah jenis kehormatan tersebut?";
 var kluKuis5 = "-";
-var jawabanKuis5a = "14 Agustusss";
-var jawabanKuis5b = "14 Septemberrrr";
-var jawabanKuis5c = "14 Oktoberrrr";
-var jawabanKuis5d = "14 Desemberrrr";
+var jawabanKuis5a = "Siaga, Madya, Rakit";
+var jawabanKuis5b = "Siaga, Penggalang, Pembina";
+var jawabanKuis5c = "Siaga, Penggalang, Penegak";
+var jawabanKuis5d = "Siaga, Ramu, Rakit";
 
 var nomorSoalKuis6 = "Soal 6";
-var soalKuis6 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis6 = "Siapa pendiri lambang gerakan pramuka di Indonesia?";
 var kluKuis6 = "-";
-var jawabanKuis6a = "14 Agustusss";
-var jawabanKuis6b = "14 Septemberrrr";
-var jawabanKuis6c = "14 Oktoberrrr";
-var jawabanKuis6d = "14 Desemberrrr";
+var jawabanKuis6a = "Sultan Hamengkubowono XI";
+var jawabanKuis6b = "Prof. Prijono";
+var jawabanKuis6c = "K. H. Agus Salim";
+var jawabanKuis6d = "Sunarjo Atmodipuro";
 
 var nomorSoalKuis7 = "Soal 7";
-var soalKuis7 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis7 = "Berapa jumlah Dasadarma?";
 var kluKuis7 = "-";
-var jawabanKuis7a = "14 Agustusss";
-var jawabanKuis7b = "14 Septemberrrr";
-var jawabanKuis7c = "14 Oktoberrrr";
-var jawabanKuis7d = "14 Desemberrrr";
+var jawabanKuis7a = "Sepuluh";
+var jawabanKuis7b = "Tiga";
+var jawabanKuis7c = "Dua";
+var jawabanKuis7d = "Sembilan";
 
 var nomorSoalKuis8 = "Soal 8";
-var soalKuis8 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis8 = "Siapakah yang memperkenalkan Pandu / Kepanduan untuk "
+    "pertama kalinya di Indonesia?";
 var kluKuis8 = "-";
-var jawabanKuis8a = "14 Agustusss";
-var jawabanKuis8b = "14 Septemberrrr";
-var jawabanKuis8c = "14 Oktoberrrr";
-var jawabanKuis8d = "14 Desemberrrr";
+var jawabanKuis8a = "Sultan Hamengkubowono XI";
+var jawabanKuis8b = "Prof. Prijono";
+var jawabanKuis8c = "Sunarjo Atmodipuro";
+var jawabanKuis8d = "K. H. Agus Salim";
 
 var nomorSoalKuis9 = "Soal 9";
-var soalKuis9 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis9 = "Ada berapa makna dari Lambang Gerakan Pramuka?";
 var kluKuis9 = "-";
-var jawabanKuis9a = "14 Agustusss";
-var jawabanKuis9b = "14 Septemberrrr";
-var jawabanKuis9c = "14 Oktoberrrr";
-var jawabanKuis9d = "14 Desemberrrr";
+var jawabanKuis9a = "Lima";
+var jawabanKuis9b = "Enam";
+var jawabanKuis9c = "Tujuh";
+var jawabanKuis9d = "Delapan";
 
 var nomorSoalKuis10 = "Soal 10";
-var soalKuis10 = "Setiap tanggalssss berapa Hari Pramuka Indonesia diperingati?";
+var soalKuis10 = "Apa judul karya tulis Baden Powell yang menjadi awal perkembangan kepanduan?";
 var kluKuis10 = "-";
-var jawabanKuis10a = "14 Agustusss";
-var jawabanKuis10b = "14 Septemberrrr";
-var jawabanKuis10c = "14 Oktoberrrr";
-var jawabanKuis10d = "14 Desemberrrr";
+var jawabanKuis10a = "Scouting For Boys";
+var jawabanKuis10b = "Rovering To Success";
+var jawabanKuis10c = "Yarns for Boy Scouts";
+var jawabanKuis10d = "Aids To Scoutmastership";

@@ -175,7 +175,7 @@ class _KuisUmum2State extends State<KuisUmum2> {
             onPressed: () {
               setState(() {
                 valueSoal2 = index;
-                if(valueSoal2 == 1){
+                if(valueSoal2 == 3){
                   jawab2 = 10;
                 }else{
                   jawab2 = 0;
