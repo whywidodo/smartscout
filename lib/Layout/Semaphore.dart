@@ -18,6 +18,7 @@ class _SemaphoreState extends State<Semaphore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: warnaPutih,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),

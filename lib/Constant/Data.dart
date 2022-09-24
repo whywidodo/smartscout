@@ -32,8 +32,10 @@ var textSandiMorse = "Sandi Morse";
 var gameMenu = "Pilihan Game";
 var gameKuis = "Kuis Umum";
 var gameDragDrop = "Cocokan Gambar";
-var gameTebak = "Tebak Gambar";
+var gameTebak = "Susun Kata";
 var gameHasil = "Hasil";
+
+var folderSS = "SmartScout";
 
 List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];

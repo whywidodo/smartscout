@@ -21,6 +21,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: warnaPutih,
       body: ListView(
         children: [
           Column(
@@ -269,31 +270,18 @@ class _HomepageState extends State<Homepage> {
   }
 
   void _keSemaphore(){
-    // Navigator.pushAndRemoveUntil(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => const Semaphore()),
-    //         (route) => false);
     Navigator.push(context,MaterialPageRoute(builder: (context) => Semaphore()));
   }
 
   void _keMorse(){
-    // Navigator.pushAndRemoveUntil(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => const Morse()),
-    //         (route) => false);
     Navigator.push(context,MaterialPageRoute(builder: (context) => Morse()));
   }
 
   void _kePengetahuanDasar(){
-    // Navigator.pushAndRemoveUntil(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => const Belajar()),
-    //         (route) => false);
     Navigator.push(context,MaterialPageRoute(builder: (context) => Belajar()));
   }
 
   void _keGame(){
-    // print("Ini akan mengalihkan ke Game");
     Navigator.push(context,MaterialPageRoute(builder: (context) => MenuGame()));
   }
 
@@ -305,10 +293,6 @@ class _HomepageState extends State<Homepage> {
       } else if (index == 1) {
         print("Ke ranking");
       } else if (index == 2) {
-        // Navigator.pushAndRemoveUntil(
-        //     context,
-        //     MaterialPageRoute(builder: (context) => const About()),
-        //         (route) => false);
         Navigator.push(context,MaterialPageRoute(builder: (context) => About()));
       } else if (index == 3) {
         print("Ke user");

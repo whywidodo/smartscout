@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
-import 'package:smartscout/Layout/Game/KuisUmum1.dart';
+import 'package:smartscout/Layout/Game/DragDrop/DragDrop.dart';
+import 'package:smartscout/Layout/Game/KuisUmum/KuisUmum1.dart';
 import 'package:smartscout/Widget/WaveShape.dart';
 
-import '../../Constant/Ukuran.dart';
-import '../../Constant/Warna.dart';
-import '../Homepage.dart';
+import 'package:smartscout/Constant/Ukuran.dart';
+import 'package:smartscout/Constant/Warna.dart';
+import 'package:smartscout/Layout/Homepage.dart';
 
 class MenuGame extends StatefulWidget {
   const MenuGame({Key? key}) : super(key: key);
@@ -19,13 +20,15 @@ class _MenuGameState extends State<MenuGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      backgroundColor: warnaPutih,
+      appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Homepage()));
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Homepage()),
+                      (route) => false);
             },
           ),
           centerTitle: true,
@@ -46,7 +49,7 @@ class _MenuGameState extends State<MenuGame> {
             ),
           ),
         ),
-        body: ListView(
+      body: ListView(
           children: [
             InkWell(
               onTap: () {
@@ -55,7 +58,7 @@ class _MenuGameState extends State<MenuGame> {
               },
               child:
                 Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
                           gradient: const LinearGradient(
@@ -74,7 +77,7 @@ class _MenuGameState extends State<MenuGame> {
                             width: 0.5 * MediaQuery.of(context).size.width,
                             child:
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                               child: Text(
                                 gameKuis,
                                 style: TextStyle(
@@ -90,7 +93,7 @@ class _MenuGameState extends State<MenuGame> {
                               width: 0.3 * MediaQuery.of(context).size.width,
                               child:
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                                 child: Icon(Icons.event_note, size: ukSimbol, color: warnaPutih,),
                               )
                           )
@@ -102,11 +105,11 @@ class _MenuGameState extends State<MenuGame> {
             ),
             InkWell(
                 onTap: () {
-                  print("keDragDrop");
+                  keDragDrop();
                 },
                 child:
                 Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
                           // color: warnaIndigo500,
@@ -126,7 +129,7 @@ class _MenuGameState extends State<MenuGame> {
                               width: 0.5 * MediaQuery.of(context).size.width,
                               child:
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                                 child: Text(
                                   gameDragDrop,
                                   style: TextStyle(
@@ -142,7 +145,7 @@ class _MenuGameState extends State<MenuGame> {
                               width: 0.3 * MediaQuery.of(context).size.width,
                               child:
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                                 child: Icon(Icons.picture_in_picture, size: ukSimbol, color: warnaPutih,),
                               )
                           )
@@ -154,11 +157,11 @@ class _MenuGameState extends State<MenuGame> {
             ),
             InkWell(
                 onTap: () {
-                  print("keTebakGambar");
+                  debugPrint("keTebakGambar");
                 },
                 child:
                 Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Container(
                       decoration: BoxDecoration(
                           // color: warnaCyan500,
@@ -178,7 +181,7 @@ class _MenuGameState extends State<MenuGame> {
                               width: 0.5 * MediaQuery.of(context).size.width,
                               child:
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                                 child: Text(
                                   gameTebak,
                                   style: TextStyle(
@@ -194,8 +197,8 @@ class _MenuGameState extends State<MenuGame> {
                               width: 0.3 * MediaQuery.of(context).size.width,
                               child:
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                                child: Icon(Icons.voicemail, size: ukSimbol, color: warnaPutih,),
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                                child: Icon(Icons.wb_auto, size: ukSimbol, color: warnaPutih,),
                               )
                           )
                         ],
@@ -206,12 +209,18 @@ class _MenuGameState extends State<MenuGame> {
             ),
           ],
         ),
-        bottomNavigationBar: getNavBar(context),
+      bottomNavigationBar: getNavBar(context),
     );
   }
+
   void keKuisUmum() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => KuisUmum1()));
+        context, MaterialPageRoute(builder: (context) => const KuisUmum1()));
+  }
+
+  void keDragDrop() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const DragDrop()));
   }
 
   BottomAppBar getNavBar(context){

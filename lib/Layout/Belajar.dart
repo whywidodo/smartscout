@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
-import 'package:smartscout/Layout/MateriBP.dart';
-import 'package:smartscout/Layout/MateriKK.dart';
-import 'package:smartscout/Layout/MateriLGP.dart';
-import '../Constant/Ukuran.dart';
-import '../Constant/Warna.dart';
+import 'package:smartscout/Layout/PengetahuanUmum/MateriBP.dart';
+import 'package:smartscout/Layout/PengetahuanUmum/MateriKK.dart';
+import 'package:smartscout/Layout/PengetahuanUmum/MateriLGP.dart';
+import 'package:smartscout/Layout/PengetahuanUmum/MateriSejarah.dart';
+import 'package:smartscout/Constant/Ukuran.dart';
+import 'package:smartscout/Constant/Warna.dart';
 import 'Homepage.dart';
-import 'MateriSejarah.dart';
 
 class Belajar extends StatefulWidget {
   const Belajar({Key? key}) : super(key: key);
@@ -19,13 +19,15 @@ class _BelajarState extends State<Belajar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: warnaPutih,
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Homepage()));
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Homepage()),
+                      (route) => false);
             },
           ),
           centerTitle: true,
@@ -182,7 +184,8 @@ class _BelajarState extends State<Belajar> {
                           ))
                     ],
                   )),
-            )
+            ),
+
           ],
         )
     );

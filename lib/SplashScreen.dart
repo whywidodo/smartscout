@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Layout/Homepage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,19 +18,17 @@ class _SplashScreenState extends State<SplashScreen> {
   splashscreenStart() async {
     var duration = const Duration(seconds: 5);
     return Timer (duration, (){
-      Navigator.pop(context);
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Homepage()),
-      );
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const Homepage()),
+              (route) => false);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      backgroundColor: Colors.white,
+      backgroundColor: warnaPutih,
       body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

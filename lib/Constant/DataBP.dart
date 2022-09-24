@@ -78,7 +78,7 @@ var biografi4 =
     "Kemudian Baden-Powell memutuskan untuk bergabung dengan dinas kemiliteran, atas bantuan "
     "pamannya Kolonel Henry Smyth, komandan dari Royal Military Academy di Woolwich. "
     "Kemudian setelah lulus dari akademi militer tersebut Baden-Powell ditempatkan di India, "
-    "dengan pangkat pembantu lestnan.\n\n";
+    "dengan pangkat pembantu letnan.\n\n";
 
 var biografi5 =
     "     Pengalaman Baden-Powell di ketentaraan inilah yang nantinya akan banyak mempengaruhi "

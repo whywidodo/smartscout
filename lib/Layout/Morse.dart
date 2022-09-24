@@ -20,11 +20,6 @@ class _MorseState extends State<Morse> {
   @override
   void initState(){
     super.initState();
-    // player.onPlayerStateChanged.listen((state) {
-    //   setState(() {
-    //     statusPlay = state == PlayerState.playing;
-    //   });
-    // });
   }
 
   @override
@@ -37,24 +32,25 @@ class _MorseState extends State<Morse> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: warnaPutih,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Homepage()));
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => const Homepage()),
+                    (route) => false);
           },
         ),
         elevation: 0.0,
         centerTitle: true,
-        // title: Text(judulMorse, style: const TextStyle(fontFamily: 'PoppinsMedium')),
         backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: AlwaysScrollableScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         child: Column(
           children: <Widget>[
             Container(
@@ -121,7 +117,7 @@ class _MorseState extends State<Morse> {
                                                 String hurufBesar = huruf[index].toUpperCase();
                                                 String hurufKecil = huruf[index].toLowerCase();
                                                 int indeks = index;
-                                                print(hurufKecil);
+                                                debugPrint(hurufKecil);
                                                 kePopup(hurufBesar, indeks);
                                               }),
 

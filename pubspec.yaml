@@ -40,16 +40,21 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   percent_indicator: ^3.0.1
   flutter_launcher_icons: ^0.10.0
+  flutter_animated_button: ^2.0.1
+  font_awesome_flutter: ^10.2.1
+  dio: ^4.0.6
+  path_provider: ^2.0.11
+  permission_handler: ^10.0.1
 
 flutter_icons:
   image_path: "assets/images/icons/sscrpurple.png"
   image_path_android: "assets/images/icons/sscrpurple.png"
   image_path_ios: "assets/images/icons/sscrpurple.png"
-  android: true # can specify file name here e.g. "ic_launcher"
-  ios: true # can specify file name here e.g. "My-Launcher-Icon"
-  adaptive_icon_background: "assets/images/icons/sscrpurple.png" # only available for Android 8.0 devices and above
-  adaptive_icon_foreground: "assets/images/icons/sscrpurple.png" # only available for Android 8.0 devices and above
-  min_sdk_android: 21 # android min sdk min:16, default 21
+  android: true
+  ios: true
+  adaptive_icon_background: "assets/images/icons/sscrpurple.png"
+  adaptive_icon_foreground: "assets/images/icons/sscrpurple.png"
+  min_sdk_android: 21
   remove_alpha_ios: true
   web:
     generate: true
@@ -86,7 +91,10 @@ flutter:
     - assets/images/
     - assets/images/icons/
     - assets/images/semaphore/
+    - assets/images/semaphoregrayscaled/
     - assets/audio/morse/
+    - assets/audio/pengetahuan/
+    - assets/file/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
