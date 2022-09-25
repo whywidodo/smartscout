@@ -37,6 +37,15 @@ var gameHasil = "Hasil";
 
 var folderSS = "SmartScout";
 
+var about = "     Smart Scout adalah aplikasi mobile yang dikembangkan dengan tujuan untuk memudahkan"
+    " para pramuka di Indonesia dalam mempelajari berbagai macam materi, aplikasi ini juga dilengkapi"
+    " dengan berbagai permainan yang dapat mengasah pengetahuan penggunanya";
+
+var pengembang = "Pengembang\nWifi Creative";
+
+var masukan = "     Jika anda memiliki kritik dan saran mengenai aplikasi Smart Scout"
+    " anda dapat menuliskan kritik dan saran melalui tombol dibawah\n\n";
+
 List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 List<String> hurufMorse = [".-", "-...", "-.-.", "-..", ".","..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",

@@ -16,6 +16,7 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: warnaPutih,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -53,12 +54,14 @@ class _AboutState extends State<About> {
               ])
           ),
           Card(
-            margin: EdgeInsets.all(5.0),
+            margin: EdgeInsets.all(10.0),
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                  Text(about,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                 ],
               ),
             ),
@@ -66,19 +69,20 @@ class _AboutState extends State<About> {
             shadowColor: warnaHitam,
           ),
           Card(
-            margin: EdgeInsets.all(5.0),
+            margin: EdgeInsets.all(10.0),
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(lorem, style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
+                  Text(masukan + pengembang,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(color: warnaHitam, fontSize: ukFormTulisanKecil)),
                 ],
               ),
             ),
             elevation: 2,
             shadowColor: warnaHitam,
-          )
-
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
