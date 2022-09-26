@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Warna.dart';
-import 'package:smartscout/Layout/Game/MenuGame.dart';
-
+import 'package:smartscout/Layout/Homepage.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
 
@@ -34,9 +33,10 @@ class _DragDropState extends State<DragDrop> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => const MenuGame()));
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => const Homepage()),
+                    (route) => false);
           },
         ),
         centerTitle: true,
@@ -161,7 +161,7 @@ class _DragDropState extends State<DragDrop> {
                 child: RaisedButton(
                   textColor: Colors.white,
                   color: Colors.pink,
-                  child: Text("New Game"),
+                  child: Text("Mulai Lagi"),
                   onPressed: ()
                   {
                     initGame();

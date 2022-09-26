@@ -45,6 +45,7 @@ dependencies:
   dio: ^4.0.6
   path_provider: ^2.0.11
   permission_handler: ^10.0.1
+  shared_preferences: ^2.0.15
 
 flutter_icons:
   image_path: "assets/images/icons/sscrpurple.png"

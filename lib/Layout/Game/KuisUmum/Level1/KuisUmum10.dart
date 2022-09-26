@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
@@ -235,11 +236,16 @@ class _KuisUmum10State extends State<KuisUmum10> {
                             style: ButtonStyle(
                               foregroundColor: MaterialStateProperty.all<Color>(warnaPutih),
                             ),
-                            onPressed: () {
+                            onPressed: () async {
                               hasilJawabKuis = jawab1 + jawab2 + jawab3 + jawab4 + jawab5 + jawab6 + jawab7 + jawab8 + jawab9 + jawab10;
                               hasilBenar = hasilJawabKuis / 10;
                               hasilSalah = 10 - hasilBenar;
                               print(hasilJawabKuis);
+                              if(hasilBenar > 8){
+                                SharedPreferences prefs = await SharedPreferences.getInstance();
+                                await prefs.setBool("loloske2", true);
+                                kuis2 = (await prefs.setString("lanjutKuis2", "loloske2")).toString();
+                              }
                               Navigator.pop(context);
                               Navigator.push(
                                   context, MaterialPageRoute(builder: (context) => Hasil()));

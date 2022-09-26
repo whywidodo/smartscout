@@ -21,7 +21,7 @@ class _DownloadSejarahState extends State<DownloadSejarah> {
   double progress = 0.0;
 
   void startDownloading() async {
-    const String url = '#';
+    const String url = 'https://www.dropbox.com/s/phny1se13f3znoa/SmartScout_Sejarah-Pramuka-Indonesia.pdf?dl=1';
     const String fileName = "SmartScout_Sejarah-Pramuka-Indonesia.pdf";
 
     Map<Permission, PermissionStatus> statuses = await [

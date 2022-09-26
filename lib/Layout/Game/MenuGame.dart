@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
 import 'package:smartscout/Layout/Game/DragDrop/DragDrop.dart';
-import 'package:smartscout/Layout/Game/KuisUmum/KuisUmum1.dart';
+import 'package:smartscout/Layout/Game/KuisUmum/Level1/KuisUmum1.dart';
 import 'package:smartscout/Widget/WaveShape.dart';
 
 import 'package:smartscout/Constant/Ukuran.dart';

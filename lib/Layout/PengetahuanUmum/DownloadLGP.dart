@@ -5,7 +5,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
 import 'package:smartscout/Constant/Warna.dart';
 
@@ -21,7 +20,7 @@ class _DownloadLGPState extends State<DownloadLGP> {
   double progress = 0.0;
 
   void startDownloading() async {
-    const String url = '#';
+    const String url = 'https://www.dropbox.com/s/pxm7628sbhv9gcz/SmartScout_Lambang-Gerakan-Pramuka.pdf?dl=1';
     const String fileName = "SmartScout_Lambang-Gerakan-Pramuka.pdf";
 
     Map<Permission, PermissionStatus> statuses = await [
@@ -59,16 +58,17 @@ class _DownloadLGPState extends State<DownloadLGP> {
 
   Future<String> _getFilePath(String filename) async {
     Directory? dir;
-    if(Platform.isIOS){
-      dir = await getExternalStorageDirectory();
-    }else{
-      dir = Directory('/storage/emulated/0/Download/$folderSS');
-      if(!await dir.exists()){
-        print("buat folder");
-        dir.create();
-      }
-    }
-    return "${dir?.path}/$filename";
+    // if(Platform.isIOS){
+    //   dir = await getExternalStorageDirectory();
+    // }else{
+    //   dir = Directory('/storage/emulated/0/Download/$folderSS');
+    //   if(!await dir.exists()){
+    //     print("buat folder");
+    //     dir.create();
+    //   }
+    // }
+    dir = await getApplicationDocumentsDirectory();
+    return "$dir/$filename";
   }
 
   @override

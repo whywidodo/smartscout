@@ -5,24 +5,24 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:smartscout/Constant/Data.dart';
-import 'package:smartscout/Constant/Ukuran.dart';
-import 'package:smartscout/Constant/Warna.dart';
+import '../Constant/Data.dart';
+import '../Constant/Ukuran.dart';
+import '../Constant/Warna.dart';
 
-class DownloadBP extends StatefulWidget {
-  const DownloadBP({Key? key}) : super(key: key);
+class DownloadDialog extends StatefulWidget {
+  const DownloadDialog({Key? key}) : super(key: key);
 
   @override
-  _DownloadBPState createState() => _DownloadBPState();
+  _DownloadDialogState createState() => _DownloadDialogState();
 }
 
-class _DownloadBPState extends State<DownloadBP> {
+class _DownloadDialogState extends State<DownloadDialog> {
   Dio dio = Dio();
   double progress = 0.0;
 
   void startDownloading() async {
-    const String url = 'https://www.dropbox.com/s/tn8l3g9dq4d8yr0/SmartScout_Biografi-Baden-Powel.pdf?dl=1';
-    const String fileName = "SmartScout_Biografi-Baden-Powel.pdf";
+    const String url = 'https://fluttercampus.com/sample.pdf';
+    const String fileName = "TV.jpg";
 
     Map<Permission, PermissionStatus> statuses = await [
       Permission.storage,
@@ -59,23 +59,16 @@ class _DownloadBPState extends State<DownloadBP> {
 
   Future<String> _getFilePath(String filename) async {
     Directory? dir;
-    dir = await getExternalStorageDirectory();
-
-    String newPath = "";
-    print(dir);
-    List<String>? paths = dir?.path.split("/");
-    for (int x = 1; x < paths!.length; x++) {
-      String folder = paths[x];
-      if (folder != "Android") {
-        newPath += "/" + folder;
-      } else {
-        break;
+    if(Platform.isIOS){
+      dir = await getExternalStorageDirectory();
+    }else{
+      dir = Directory('/storage/emulated/0/Download/$folderSS');
+      if(!await dir.exists()){
+        print("buat folder");
+        dir.create();
       }
     }
-    newPath = newPath + folderSS;
-    dir = Directory(newPath);
-
-    return "$newPath/$filename";
+    return "${dir?.path}/$filename";
   }
 
   @override

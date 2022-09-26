@@ -4,8 +4,10 @@ const warnaTombolSubmit = Color(0xFF6C3FA2);
 const warnaTombolSUbmitHover = Color(0xFF7C49BB);
 const warnaTombolGrid = Color(0xFFEADBFD);
 const warnaTombolGridMateri = Color(0xFFC7A2F5);
+const warnaHomepage = Color(0xFFC4E3E6);
 
 const warnaHitam = Color(0xFF3D3D3D);
+const warnaHitamAbu = Color(0xFF555555);
 const warnaAbu = Color(0xFFCCCCCC);
 const warnaPutih = Color(0xFFFFFFFF);
 const warnaUngu = Color(0xFF6C3FA2);
