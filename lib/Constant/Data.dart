@@ -36,7 +36,7 @@ var gameTebak = "Susun Kata";
 var gameHasil = "Hasil";
 var pilihKuis = "Pilihan Kuis";
 
-var folderSS = "/SmartScout";
+var folderSS = "SmartScout";
 
 var about = "     Smart Scout adalah aplikasi mobile yang dikembangkan dengan tujuan untuk memudahkan"
     " para pramuka di Indonesia dalam mempelajari berbagai macam materi, aplikasi ini juga dilengkapi"

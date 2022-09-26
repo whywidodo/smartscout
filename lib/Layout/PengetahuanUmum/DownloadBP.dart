@@ -45,7 +45,7 @@ class _DownloadBPState extends State<DownloadBP> {
       ).then((_) {
         Navigator.pop(context);
         Fluttertoast.showToast(
-            msg: "Download selesai.\n File tersimpan di folder Download/SmartScout",
+            msg: "Download selesai.\nFile tersimpan di internal folder SmartScout",
             toastLength: Toast.LENGTH_LONG,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,
@@ -72,7 +72,7 @@ class _DownloadBPState extends State<DownloadBP> {
         break;
       }
     }
-    newPath = newPath + folderSS;
+    newPath = newPath + "/" + folderSS;
     dir = Directory(newPath);
 
     return "$newPath/$filename";
