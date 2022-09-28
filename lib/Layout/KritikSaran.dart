@@ -56,6 +56,7 @@ class _KritikSaranState extends State<KritikSaran> {
       body: ListView(
         children: [
           Container(
+              margin: const EdgeInsets.only(top: 15),
               padding: const EdgeInsets.only(top: 10),
               child: Image.asset(
                   'assets/images/kritiksaran.png',
@@ -64,9 +65,9 @@ class _KritikSaranState extends State<KritikSaran> {
               ),
           ),
           Card(
-            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
+            margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
             child: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
                   Row(
@@ -216,7 +217,7 @@ class _KritikSaranState extends State<KritikSaran> {
                         label: Text("Kirim",
                             style: TextStyle(color: warnaPutih, fontFamily: 'PoppinsMedium', fontSize: ukFormTulisanKecil)
                         ),
-                        icon: Icon(Icons.send_outlined, color: warnaPutih),
+                        icon: const Icon(Icons.send_outlined, color: warnaPutih),
 
                       ),
                     ),
@@ -236,12 +237,11 @@ class _KritikSaranState extends State<KritikSaran> {
         color: warnaPutih,
         buttonBackgroundColor: warnaPutih,
         animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: const Duration(milliseconds: 300),
         items: <Widget>[
           Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.chat_outlined, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.account_circle_outlined, size: ukIconBesar, color: warnaUngu),
         ],
         onTap: (index) {
           _onItemTapped(index);
@@ -255,17 +255,15 @@ class _KritikSaranState extends State<KritikSaran> {
     setState(() {
       selectedIndex = index;
       if (index == 0) {
-        Navigator.pop(context);
+        Navigator.of(context, rootNavigator: true).pop();
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Homepage()));
+            context, MaterialPageRoute(builder: (context) => const Homepage()));
       } else if (index == 1) {
-        print("Ke kritik");
+        print("ke kritik");
       } else if (index == 2) {
-        Navigator.pop(context);
+        Navigator.of(context, rootNavigator: true).pop();
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => About()));
-      } else if (index == 3) {
-        print("Ke user");
+            context, MaterialPageRoute(builder: (context) => const About()));
       }
     });
   }

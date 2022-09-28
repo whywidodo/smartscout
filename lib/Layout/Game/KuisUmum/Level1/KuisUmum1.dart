@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartscout/Constant/DataSoalKuis.dart';
-import 'package:smartscout/Layout/Homepage.dart';
+import 'package:smartscout/Layout/Game/PilihanKuis.dart';
 import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
@@ -23,10 +23,9 @@ class _KuisUmum1State extends State<KuisUmum1> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const Homepage()),
-                    (route) => false);
+            Navigator.of(context, rootNavigator: true).pop();
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => const PilihanKuis()));
             selectedIndex = 0;
           },
         ),

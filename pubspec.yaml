@@ -48,6 +48,7 @@ dependencies:
   shared_preferences: ^2.0.15
   firebase_core: ^1.23.0
   cloud_firestore: ^3.4.9
+  share_plus: ^4.4.0
 
 flutter_icons:
   image_path: "assets/images/icons/sscrpurple.png"

@@ -303,12 +303,11 @@ class _HomepageState extends State<Homepage> {
         color: warnaPutih,
         buttonBackgroundColor: warnaPutih,
         animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: const Duration(milliseconds: 300),
         items: <Widget>[
           Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.chat_outlined, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.account_circle_outlined, size: ukIconBesar, color: warnaUngu),
         ],
         onTap: (index) {
           _onItemTapped(index);
@@ -319,15 +318,15 @@ class _HomepageState extends State<Homepage> {
   }
 
   void _keSemaphore(){
-    Navigator.push(context,MaterialPageRoute(builder: (context) => Semaphore()));
+    Navigator.push(context,MaterialPageRoute(builder: (context) => const Semaphore()));
   }
 
   void _keMorse(){
-    Navigator.push(context,MaterialPageRoute(builder: (context) => Morse()));
+    Navigator.push(context,MaterialPageRoute(builder: (context) => const Morse()));
   }
 
   void _kePengetahuanDasar(){
-    Navigator.push(context,MaterialPageRoute(builder: (context) => Belajar()));
+    Navigator.push(context,MaterialPageRoute(builder: (context) => const Belajar()));
   }
 
   void _kePopupGame(){
@@ -497,16 +496,14 @@ class _HomepageState extends State<Homepage> {
     setState(() {
       selectedIndex = index;
       if (index == 0) {
-        print("Ke homepage");
+        print("ke homepage");
       } else if (index == 1) {
-        Navigator.pop(context);
+        Navigator.of(context, rootNavigator: true).pop();
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => KritikSaran()));
+            context, MaterialPageRoute(builder: (context) => const KritikSaran()));
       } else if (index == 2) {
-        Navigator.pop(context);
+        Navigator.of(context, rootNavigator: true).pop();
         Navigator.push(context,MaterialPageRoute(builder: (context) => const About()));
-      } else if (index == 3) {
-        print("Ke user");
       }
     });
   }

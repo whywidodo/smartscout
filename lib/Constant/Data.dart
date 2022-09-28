@@ -58,7 +58,10 @@ var about = "     Smart Scout adalah aplikasi mobile yang dikembangkan dengan tu
     " para pramuka di Indonesia dalam mempelajari berbagai macam materi, aplikasi ini juga dilengkapi"
     " dengan berbagai permainan yang dapat mengasah pengetahuan penggunanya";
 
-var pengembang = "Pengembang\nWifi Creative";
+var pengembang = "Pengembang\n\nWifi Creative";
+var textSharing = "SmartScout - Aplikasi Pramuka Indonesia dengan beragam fitur didalamnya.\n"
+                "Dapatkan aplikasinya sekarang juga, dengan mengunduhnya melalui google playstore";
+var sub = "WiFi Creative";
 
 var masukan = "     Jika anda memiliki kritik dan saran mengenai aplikasi Smart Scout"
     " anda dapat menuliskan kritik dan saran melalui tombol dibawah\n\n";

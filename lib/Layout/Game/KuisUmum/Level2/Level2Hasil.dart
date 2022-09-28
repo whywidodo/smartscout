@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/DataSoal2.dart';
+import 'package:smartscout/Layout/Game/PilihanKuis.dart';
+import 'package:smartscout/Layout/Game/KuisUmum/Level2/Level2Soal1.dart';
 import 'package:smartscout/Layout/Homepage.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
 import 'package:smartscout/Constant/Warna.dart';
@@ -14,6 +17,20 @@ class Level2Hasil extends StatefulWidget {
 }
 
 class _Level2HasilState extends State<Level2Hasil> {
+  @override
+  void initState() {
+    super.initState();
+    if(lv2_hasilBenar > 7){
+      kuisUcapan = kuisSelamat;
+      kuisAlert = kuisSukses;
+      kuisBool = true;
+    }else{
+      kuisUcapan = kuisMaaf;
+      kuisAlert = kuisGagal;
+      kuisBool = false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +64,7 @@ class _Level2HasilState extends State<Level2Hasil> {
                           top: 30, bottom: 10, left: 10, right: 10),
                       child: Container(
                         width: 0.8 * MediaQuery.of(context).size.width,
-                        height: 0.4 * MediaQuery.of(context).size.height,
+                        height: 0.6 * MediaQuery.of(context).size.height,
                         child: Column(
                           children: [
                             Text("Hasil Test\n",
@@ -75,6 +92,23 @@ class _Level2HasilState extends State<Level2Hasil> {
                               padding: EdgeInsets.only(top: 30.0),
                               child: Column(
                                 children: [
+                                  const Divider(
+                                    color: warnaAbu,
+                                    thickness: 0.5,
+                                  ),
+                                  Text(kuisUcapan, textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: warnaHitamAbu,
+                                          fontSize: ukFormTulisanPas,
+                                          fontWeight: FontWeight.bold
+                                      )
+                                  ),
+                                  Text(kuisAlert, textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: warnaHitamAbu,
+                                        fontSize: ukFormTulisanSedang,
+                                      )
+                                  ),
                                   Text(
                                     "Analisis Kuis",
                                     style: TextStyle(
@@ -157,38 +191,76 @@ class _Level2HasilState extends State<Level2Hasil> {
                   shadowColor: warnaHitam,
                 ),
                 const SizedBox(height: 10),
-                InkWell(
-                  onTap: () {
-                    keHomepage();
-                    lv2_hasilBenar = 0;
-                    lv2_hasilSalah = 0;
-                  },
-                  child: Container(
-                      height: 50,
-                      width: 0.5 * MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(width: 2, color: warnaPutih),
-                          color: warnaPurple700),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.home, color: warnaPutih),
-                          const SizedBox(width: 10),
-                          Text(
-                            "Beranda",
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                letterSpacing: 2.0,
-                                color: warnaPutih,
-                                fontFamily: 'PoppinsMedium',
-                                fontSize: ukFormTulisanKecil),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextButton.icon(
+                          style: TextButton.styleFrom(
+                            backgroundColor: warnaPutih,
+                            shape:RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
                           ),
-                        ],
-                      )),
-                )
+                          onPressed: () => {
+                            keMenuKuis(),
+                            lv2_hasilBenar = 0,
+                            lv2_hasilSalah = 0,
+                          },
+                          icon: Icon(Icons.home_outlined, color: warnaUngu,),
+                          label: Text(
+                              "Menu Kuis",
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily:
+                                  'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil)
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child:
+                        TextButton.icon(
+                          style: TextButton.styleFrom(
+                            backgroundColor: warnaPutih,
+                            shape:RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                          ),
+                          onPressed: () => {
+                            if(lv2_hasilBenar > 7){
+                              keSoon()
+                            }else{
+                              keUlangiKuis()
+                            }
+                          },
+
+                          label: kuisBool ?
+                          Text(
+                              "Lanjut",
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily:
+                                  'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil)
+                          ) :
+                          Text(
+                              "Ulangi",
+                              style: TextStyle(
+                                  color: warnaUngu,
+                                  fontFamily:
+                                  'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil)
+                          ),
+                          icon: kuisBool ? Icon(Icons.next_plan_outlined, color: warnaUngu,) : Icon(Icons.repeat, color: warnaUngu,),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )),
@@ -200,5 +272,70 @@ class _Level2HasilState extends State<Level2Hasil> {
         context,
         MaterialPageRoute(builder: (context) => const Homepage()),
         (route) => false);
+  }
+
+  void keMenuKuis() {
+    Navigator.of(context, rootNavigator: true).pop();
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const PilihanKuis()));
+  }
+
+  void keUlangiKuis() {
+    Navigator.of(context, rootNavigator: true).pop();
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Level2Soal1()));
+  }
+  void keSoon(){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            scrollable: true,
+            content: Column(
+              children: <Widget>[
+                Icon(Icons.error_outline_outlined, color: warnaRed500, size: ukSimbolSedang),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    judulSoon,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        color: warnaHitamAbu,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: ukFormTulisanKecil),
+                  ),
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: Text(
+                      alertSoon,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: warnaHitamAbu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanKecil),
+                    )
+                ),
+                Container(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: EdgeInsets.all(5),
+                      child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true).pop();
+                        },
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.white,
+                          backgroundColor: warnaUngu,
+                        ),
+                        child: Text("OK", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
+                      ),
+                    )
+                )
+              ],
+            ),
+          );
+        });
   }
 }
