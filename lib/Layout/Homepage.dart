@@ -38,282 +38,298 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: warnaPutih,
-      extendBodyBehindAppBar: true,
-      body: ListView(
-        children: [
-          Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.zero,
-                  width: MediaQuery.of(context).size.width,
-                  color: warnaHomepage,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child:
-                    Container(
-                        alignment: Alignment.centerLeft,
-                        child:
-                        Row(
-                          children: [
-                            Text(
-                              textHai1,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  color: warnaHitam,
-                                  fontFamily: 'PoppinsSemiBold',
-                                  fontSize: ukFormTulisanPas),
-                            ),
-                            Text(
-                              textHai2,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  color: warnaUngu,
-                                  fontFamily: 'PoppinsSemiBold',
-                                  fontSize: ukFormTulisanPas),
-                            ),
-                          ],
-                        )
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.zero,
-                  width: MediaQuery.of(context).size.width,
-                  color: warnaUngu,
-                  child: Image.asset(
-                      'assets/images/newBg.png',
-                      width: MediaQuery.of(context).size.width,
-                      height: 200,
-                      fit: BoxFit.fitWidth
-                  ),
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  children: <Widget> [
-                    const Expanded(
-                        child: Divider(
-                          color: warnaAbu,
-                          thickness: 0.5,
-                        ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+    DateTime _lastExitTime = DateTime.now();
+    return WillPopScope(
+        onWillPop: () async {
+          if (DateTime.now().difference(_lastExitTime) >= const Duration(seconds: 2)) {
+            const snack =  SnackBar(
+              content:  Text("Tekan sekali lagi untuk keluar aplikasi."),
+              duration: Duration(seconds: 2),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snack);
+            _lastExitTime = DateTime.now();
+            return false; // disable back press
+          } else {
+            return true; //  exit the app
+          }
+        },
+      child: Scaffold(
+          backgroundColor: warnaPutih,
+          extendBodyBehindAppBar: true,
+          body: ListView(
+            children: [
+              Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.zero,
+                    width: MediaQuery.of(context).size.width,
+                    color: warnaHomepage,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
                       child:
                       Container(
                           alignment: Alignment.centerLeft,
                           child:
-                          Text(
-                            textKMenu,
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                color: warnaHitam,
-                                fontFamily: 'PoppinsSemiBold',
-                                fontSize: ukFormTulisanSedang),
+                          Row(
+                            children: [
+                              Text(
+                                textHai1,
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    color: warnaHitam,
+                                    fontFamily: 'PoppinsSemiBold',
+                                    fontSize: ukFormTulisanPas),
+                              ),
+                              Text(
+                                textHai2,
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    color: warnaUngu,
+                                    fontFamily: 'PoppinsSemiBold',
+                                    fontSize: ukFormTulisanPas),
+                              ),
+                            ],
                           )
                       ),
                     ),
-                    const Expanded(
-                      child: Divider(
-                        color: warnaAbu,
-                        thickness: 0.5,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          onTap: (){
-                            _keSemaphore();
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height/4,
-                            width: MediaQuery.of(context).size.width/2,
-                            decoration: BoxDecoration(
-                                color: warnaPurple200,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.bottomRight,
-                                  end: Alignment.topLeft,
-                                  colors: [warnaPurple500, warnaPurple200],
-                                ),
-                                borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
-                            ),
-                            child: Column(
-                              children: [
-                                Container(
-                                  height: 0.2 * MediaQuery.of(context).size.height,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Center(
-                                    child: Icon(Icons.flag, size: ukSimbol, color: warnaPutih,),
-                                  ),
-                                ),
-                                RichText(text: TextSpan(
-                                    text: judulSemaphore,
-                                    style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
-                                    recognizer: TapGestureRecognizer()..onTap = () => _keSemaphore())
-                                ),
-                              ],
-                            ),
-                          ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.zero,
+                    width: MediaQuery.of(context).size.width,
+                    color: warnaUngu,
+                    child: Image.asset(
+                        'assets/images/newBg.png',
+                        width: MediaQuery.of(context).size.width,
+                        height: 200,
+                        fit: BoxFit.fitWidth
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  Row(
+                    children: <Widget> [
+                      const Expanded(
+                        child: Divider(
+                          color: warnaAbu,
+                          thickness: 0.5,
                         ),
                       ),
-
-                      const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
-
-                      Expanded(
-                        child: InkWell(
-                          onTap: (){
-                            _keMorse();
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height/4,
-                            width: MediaQuery.of(context).size.width/2,
-                            decoration: BoxDecoration(
-                                color: warnaCyan200,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.bottomLeft,
-                                  end: Alignment.topRight,
-                                  colors: [warnaCyan500, warnaCyan200],
-                                ),
-                                borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
-                            ),
-                            child: Column(
-                              children: [
-                                Container(
-                                  height: 0.2 * MediaQuery.of(context).size.height,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Center(
-                                    child: Icon(Icons.wysiwyg_outlined, size: ukSimbol, color: warnaPutih,),
-                                  ),
-                                ),
-                                RichText(text: TextSpan(
-                                    text: judulMorse,
-                                    style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
-                                    recognizer: TapGestureRecognizer()..onTap = () => _keMorse())
-                                ),
-                              ],
-                            ),
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child:
+                        Container(
+                            alignment: Alignment.centerLeft,
+                            child:
+                            Text(
+                              textKMenu,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: warnaHitam,
+                                  fontFamily: 'PoppinsSemiBold',
+                                  fontSize: ukFormTulisanSedang),
+                            )
                         ),
                       ),
+                      const Expanded(
+                        child: Divider(
+                          color: warnaAbu,
+                          thickness: 0.5,
+                        ),
+                      )
                     ],
                   ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          onTap: (){
-                            _kePengetahuanDasar();
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height/4,
-                            width: MediaQuery.of(context).size.width/2,
-                            decoration: BoxDecoration(
-                                color: warnaOrange200,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft,
-                                  colors: [warnaOrange500, warnaOrange200],
-                                ),
-                                borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
-                            ),
-                            child: Column(
-                              children: [
-                                Container(
-                                  height: 0.2 * MediaQuery.of(context).size.height,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Center(
-                                    child: Icon(Icons.book, size: ukSimbol, color: warnaPutih,),
+                  const SizedBox(height: 15),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: InkWell(
+                            onTap: (){
+                              _keSemaphore();
+                            },
+                            child: Container(
+                              height: MediaQuery.of(context).size.height/4,
+                              width: MediaQuery.of(context).size.width/2,
+                              decoration: BoxDecoration(
+                                  color: warnaPurple200,
+                                  gradient: const LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [warnaPurple500, warnaPurple200],
                                   ),
-                                ),
-                                RichText(text: TextSpan(
-                                    text: judulPengetahuan,
-                                    style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
-                                    recognizer: TapGestureRecognizer()..onTap = () => _keSemaphore())
-                                ),
-                              ],
+                                  borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 0.2 * MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Center(
+                                      child: Icon(Icons.flag, size: ukSimbol, color: warnaPutih,),
+                                    ),
+                                  ),
+                                  RichText(text: TextSpan(
+                                      text: judulSemaphore,
+                                      style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
+                                      recognizer: TapGestureRecognizer()..onTap = () => _keSemaphore())
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
 
-                      const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+                        const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
 
-                      Expanded(
-                        child: InkWell(
-                          onTap: (){
-                            // _keGame();
-                            _kePopupGame();
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height/4,
-                            width: MediaQuery.of(context).size.width/2,
-                            decoration: BoxDecoration(
-                                color: warnaGreen200,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [warnaGreen500, warnaGreen200],
-                                ),
-                                borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
-                            ),
-                            child: Column(
-                              children: [
-                                Container(
-                                  height: 0.2 * MediaQuery.of(context).size.height,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Center(
-                                    child: Icon(Icons.videogame_asset, size: ukSimbol, color: warnaPutih,),
+                        Expanded(
+                          child: InkWell(
+                            onTap: (){
+                              _keMorse();
+                            },
+                            child: Container(
+                              height: MediaQuery.of(context).size.height/4,
+                              width: MediaQuery.of(context).size.width/2,
+                              decoration: BoxDecoration(
+                                  color: warnaCyan200,
+                                  gradient: const LinearGradient(
+                                    begin: Alignment.bottomLeft,
+                                    end: Alignment.topRight,
+                                    colors: [warnaCyan500, warnaCyan200],
                                   ),
-                                ),
-                                RichText(text: TextSpan(
-                                    text: judulGame,
-                                    style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
-                                    recognizer: TapGestureRecognizer()..onTap = () => _keMorse())
-                                ),
-                              ],
+                                  borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 0.2 * MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Center(
+                                      child: Icon(Icons.wysiwyg_outlined, size: ukSimbol, color: warnaPutih,),
+                                    ),
+                                  ),
+                                  RichText(text: TextSpan(
+                                      text: judulMorse,
+                                      style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
+                                      recognizer: TapGestureRecognizer()..onTap = () => _keMorse())
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                )
-              ],
-            ),
-          const SizedBox(height: 10),
-        ],
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: warnaUngu,
-        index: selectedIndex,
-        height: ukNavbar,
-        color: warnaPutih,
-        buttonBackgroundColor: warnaPutih,
-        animationCurve: Curves.easeInOut,
-        animationDuration: const Duration(milliseconds: 300),
-        items: <Widget>[
-          Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.chat_outlined, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
-        ],
-        onTap: (index) {
-          _onItemTapped(index);
-        },
-        letIndexChange: (index) => true,
-      ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: InkWell(
+                            onTap: (){
+                              _kePengetahuanDasar();
+                            },
+                            child: Container(
+                              height: MediaQuery.of(context).size.height/4,
+                              width: MediaQuery.of(context).size.width/2,
+                              decoration: BoxDecoration(
+                                  color: warnaOrange200,
+                                  gradient: const LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [warnaOrange500, warnaOrange200],
+                                  ),
+                                  borderRadius: BorderRadius.only(topLeft:Radius.circular(ukRounded), bottomRight: Radius.circular(ukRounded))
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 0.2 * MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Center(
+                                      child: Icon(Icons.book, size: ukSimbol, color: warnaPutih,),
+                                    ),
+                                  ),
+                                  RichText(text: TextSpan(
+                                      text: judulPengetahuan,
+                                      style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
+                                      recognizer: TapGestureRecognizer()..onTap = () => _keSemaphore())
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+
+                        Expanded(
+                          child: InkWell(
+                            onTap: (){
+                              // _keGame();
+                              _kePopupGame();
+                            },
+                            child: Container(
+                              height: MediaQuery.of(context).size.height/4,
+                              width: MediaQuery.of(context).size.width/2,
+                              decoration: BoxDecoration(
+                                  color: warnaGreen200,
+                                  gradient: const LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [warnaGreen500, warnaGreen200],
+                                  ),
+                                  borderRadius: BorderRadius.only(topRight:Radius.circular(ukRounded), bottomLeft: Radius.circular(ukRounded))
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 0.2 * MediaQuery.of(context).size.height,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Center(
+                                      child: Icon(Icons.videogame_asset, size: ukSimbol, color: warnaPutih,),
+                                    ),
+                                  ),
+                                  RichText(text: TextSpan(
+                                      text: judulGame,
+                                      style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil),
+                                      recognizer: TapGestureRecognizer()..onTap = () => _keMorse())
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+            ],
+          ),
+          bottomNavigationBar: CurvedNavigationBar(
+            backgroundColor: warnaUngu,
+            index: selectedIndex,
+            height: ukNavbar,
+            color: warnaPutih,
+            buttonBackgroundColor: warnaPutih,
+            animationCurve: Curves.easeInOut,
+            animationDuration: const Duration(milliseconds: 300),
+            items: <Widget>[
+              Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
+              Icon(Icons.chat_outlined, size: ukIconBesar, color: warnaUngu),
+              Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
+            ],
+            onTap: (index) {
+              _onItemTapped(index);
+            },
+            letIndexChange: (index) => true,
+          ),
+        )
     );
   }
 
@@ -507,4 +523,5 @@ class _HomepageState extends State<Homepage> {
       }
     });
   }
+
 }

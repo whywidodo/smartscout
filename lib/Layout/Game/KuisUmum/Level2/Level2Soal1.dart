@@ -17,33 +17,41 @@ class Level2Soal1 extends StatefulWidget {
 class _Level2Soal1State extends State<Level2Soal1> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: warnaPutih,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop();
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => const PilihanKuis()));
-            selectedIndex = 0;
-          },
+    return WillPopScope(
+        onWillPop: () async {
+          Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => const PilihanKuis()),
+                  (route) => false);
+          return false;
+        },
+      child: Scaffold(
+        backgroundColor: warnaPutih,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).pop();
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => const PilihanKuis()));
+              selectedIndex = 0;
+            },
+          ),
+          centerTitle: true,
+          backgroundColor: warnaUngu,
+          foregroundColor: warnaPutih,
+          elevation: 0.0,
         ),
-        centerTitle: true,
-        backgroundColor: warnaUngu,
-        foregroundColor: warnaPutih,
-        elevation: 0.0,
-      ),
-      body: ListView(
-        children: [
-          Container(
+        body: ListView(
+          children: [
+            Container(
               height: 250,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(0.0),
-                    bottomRight: Radius.circular(0.0),
-                    topLeft: Radius.circular(0.0),
-                    bottomLeft: Radius.circular(0.0),
+                  topRight: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                  topLeft: Radius.circular(0.0),
+                  bottomLeft: Radius.circular(0.0),
                 ),
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -74,30 +82,32 @@ class _Level2Soal1State extends State<Level2Soal1> {
                   )
                 ],
               ),
-          ),
-          areaKlu(),
-          Column(
-            children: <Widget> [
-              CustomRadio(lv2_jawabanKuis1a, 1),
-              CustomRadio(lv2_jawabanKuis1b, 2),
-              CustomRadio(lv2_jawabanKuis1c, 3),
-              CustomRadio(lv2_jawabanKuis1d, 4),
-            ],
-          ),
+            ),
+            areaKlu(),
+            Column(
+              children: <Widget> [
+                CustomRadio(lv2_jawabanKuis1a, 1),
+                CustomRadio(lv2_jawabanKuis1b, 2),
+                CustomRadio(lv2_jawabanKuis1c, 3),
+                CustomRadio(lv2_jawabanKuis1d, 4),
+              ],
+            ),
 
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        heroTag: Text(lv2_nextSoal1),
-        child: const Icon(Icons.navigate_next),
-        backgroundColor: warnaUngu,
-        onPressed: (){
-          print(lv2_jawab1);
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const Level2Soal2()));
-        },
-      ),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          heroTag: Text(lv2_nextSoal1),
+          child: const Icon(Icons.navigate_next),
+          backgroundColor: warnaUngu,
+          onPressed: (){
+            print(lv2_jawab1);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => const Level2Soal2()));
+          },
+        ),
+      )
     );
+
   }
 
   Widget areaKlu(){
