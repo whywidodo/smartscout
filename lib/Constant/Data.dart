@@ -18,6 +18,7 @@ var judulKode = "Kode Kehormatan";
 var judulLambang = "Lambang Gerakan Pramuka";
 var judulLambang1 = "Lambang Gerakan\nPramuka";
 var judulGame = "Game";
+var judulKritik = "Kritik dan Saran";
 
 var mainSuara = "Mainkan Sekarang";
 var putarSuara = "Play";
@@ -26,6 +27,9 @@ var stopSuara = "Tutup";
 var textHai1 = "Selamat ";
 var textHai2 = "Datang";
 var textKMenu = "Menu Belajar";
+var textTulisan = "Tuliskan";
+var textKSaran = "Kritik & Saran";
+var textValidasi = "Masukan kode konfirmasi berikut.";
 
 var textSandiMorse = "Sandi Morse";
 
@@ -35,6 +39,18 @@ var gameDragDrop = "Cocokan Gambar";
 var gameTebak = "Susun Kata";
 var gameHasil = "Hasil";
 var pilihKuis = "Pilihan Kuis";
+
+var comingSoon = "soon";
+var judulSoon = "Coming Soon";
+var alertSoon = "Maaf kuis ini belum tersedia.";
+
+var kuisUcapan = "";
+var kuisAlert = "";
+var kuisSelamat = "Selamat";
+var kuisMaaf = "Maaf";
+var kuisSukses = "Anda berhasil menyelesaikan kuis ini dengan baik.🥳\n";
+var kuisGagal = "Coba ulangi kuisnya yaa...😢\n";
+bool kuisBool = false;
 
 var folderSS = "SmartScout";
 

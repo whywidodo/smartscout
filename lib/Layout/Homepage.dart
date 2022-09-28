@@ -10,8 +10,8 @@ import 'package:smartscout/Constant/Data.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Constant/Ukuran.dart';
 import 'package:smartscout/Layout/Belajar.dart';
-import 'package:smartscout/Layout/Game/MenuGame.dart';
 import 'package:smartscout/Layout/Game/PilihanKuis.dart';
+import 'package:smartscout/Layout/KritikSaran.dart';
 import 'package:smartscout/Layout/Morse.dart';
 import 'package:smartscout/Layout/Semaphore.dart';
 import 'package:smartscout/Layout/Game/DragDrop/DragDrop.dart';
@@ -306,7 +306,7 @@ class _HomepageState extends State<Homepage> {
         animationDuration: Duration(milliseconds: 300),
         items: <Widget>[
           Icon(Icons.home, size: ukIconBesar, color: warnaUngu),
-          Icon(Icons.bar_chart_outlined, size: ukIconBesar, color: warnaUngu),
+          Icon(Icons.chat_outlined, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.info_outline, size: ukIconBesar, color: warnaUngu),
           Icon(Icons.account_circle_outlined, size: ukIconBesar, color: warnaUngu),
         ],
@@ -408,6 +408,7 @@ class _HomepageState extends State<Homepage> {
   }
 
   void keDragDrop() {
+    Navigator.of(context, rootNavigator: true).pop();
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => const DragDrop()));
   }
@@ -498,8 +499,11 @@ class _HomepageState extends State<Homepage> {
       if (index == 0) {
         print("Ke homepage");
       } else if (index == 1) {
-        print("Ke ranking");
+        Navigator.pop(context);
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => KritikSaran()));
       } else if (index == 2) {
+        Navigator.pop(context);
         Navigator.push(context,MaterialPageRoute(builder: (context) => const About()));
       } else if (index == 3) {
         print("Ke user");

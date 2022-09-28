@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "572729558757",
+    "project_id": "smartscout-iitc",
+    "storage_bucket": "smartscout-iitc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572729558757:android:06a0417796fa9e1629f60c",
+        "android_client_info": {
+          "package_name": "labs.nusantara.smartscout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572729558757-j94emtuuj14aur3r32htihk38u895g1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "labs.nusantara.smartscout",
+            "certificate_hash": "5ce0d573d879185e2b20248756a32a789cf3c387"
+          }
+        },
+        {
+          "client_id": "572729558757-mpi8qb655kblbeb7qeqptqhlcdgo65dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMlQdIIX4-kEpdxfS1SrDE6Ym0OL-d7l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572729558757-mpi8qb655kblbeb7qeqptqhlcdgo65dq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

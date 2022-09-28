@@ -157,7 +157,7 @@ class _PilihanKuisState extends State<PilihanKuis> {
           ),
           InkWell(
               onTap: () {
-                cekKuis3();
+                keSoon();
               },
               child:
               Padding(
@@ -196,11 +196,14 @@ class _PilihanKuisState extends State<PilihanKuis> {
                             alignment: Alignment.centerRight,
                             height: 50,
                             width: 0.3 * MediaQuery.of(context).size.width,
-                            child:
-                            Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                                child: (kuis3 == "null") ? Icon(Icons.lock_outline, size: ukSimbolKecil, color: warnaPutih) : null
-                            )
+                            child: Text(
+                              comingSoon,
+                              style: TextStyle(
+                                  color: warnaHitamAbu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil),
+                              textAlign: TextAlign.center,
+                            ),
                         )
                       ],
                     )
@@ -210,7 +213,7 @@ class _PilihanKuisState extends State<PilihanKuis> {
           ),
           InkWell(
               onTap: () {
-                cekKuis4();
+                keSoon();
               },
               child:
               Padding(
@@ -249,11 +252,14 @@ class _PilihanKuisState extends State<PilihanKuis> {
                             alignment: Alignment.centerRight,
                             height: 50,
                             width: 0.3 * MediaQuery.of(context).size.width,
-                            child:
-                            Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                                child: (kuis4 == "null") ? Icon(Icons.lock_outline, size: ukSimbolKecil, color: warnaPutih) : null
-                            )
+                            child: Text(
+                              comingSoon,
+                              style: TextStyle(
+                                  color: warnaHitamAbu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil),
+                              textAlign: TextAlign.center,
+                            ),
                         )
                       ],
                     )
@@ -263,7 +269,7 @@ class _PilihanKuisState extends State<PilihanKuis> {
           ),
           InkWell(
               onTap: () {
-                cekKuis5();
+                keSoon();
               },
               child:
               Padding(
@@ -302,11 +308,14 @@ class _PilihanKuisState extends State<PilihanKuis> {
                             alignment: Alignment.centerRight,
                             height: 50,
                             width: 0.3 * MediaQuery.of(context).size.width,
-                            child:
-                            Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                                child: (kuis5 == "null") ? Icon(Icons.lock_outline, size: ukSimbolKecil, color: warnaPutih) : null
-                            )
+                            child: Text(
+                              comingSoon,
+                              style: TextStyle(
+                                  color: warnaHitamAbu,
+                                  fontFamily: 'PoppinsMedium',
+                                  fontSize: ukFormTulisanKecil),
+                              textAlign: TextAlign.center,
+                            ),
                         )
                       ],
                     )
@@ -452,6 +461,60 @@ class _PilihanKuisState extends State<PilihanKuis> {
                       child: Text("OK", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
                     ),
                   )
+                )
+              ],
+            ),
+          );
+        });
+  }
+
+  void keSoon(){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            scrollable: true,
+            content: Column(
+              children: <Widget>[
+                Icon(Icons.error_outline_outlined, color: warnaRed500, size: ukSimbolSedang),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    judulSoon,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        color: warnaHitamAbu,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: ukFormTulisanKecil),
+                  ),
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: Text(
+                      alertSoon,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: warnaHitamAbu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanKecil),
+                    )
+                ),
+                Container(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: EdgeInsets.all(5),
+                      child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true).pop();
+                        },
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.white,
+                          backgroundColor: warnaUngu,
+                        ),
+                        child: Text("OK", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
+                      ),
+                    )
                 )
               ],
             ),
