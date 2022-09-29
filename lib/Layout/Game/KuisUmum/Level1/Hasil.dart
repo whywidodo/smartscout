@@ -73,7 +73,7 @@ class _HasilState extends State<Hasil> {
                                   top: 30, bottom: 10, left: 10, right: 10),
                               child: Container(
                                 width: 0.8 * MediaQuery.of(context).size.width,
-                                height: 0.6 * MediaQuery.of(context).size.height,
+                                height: 0.5 * MediaQuery.of(context).size.height,
                                 child: Column(
                                   children: [
                                     Text("Hasil Test\n",
@@ -215,6 +215,7 @@ class _HasilState extends State<Hasil> {
                                   ),
                                   onPressed: () => {
                                     keMenuKuis(),
+                                    resetNilai_lv1(),
                                     hasilBenar = 0,
                                     hasilSalah = 0,
                                   },
@@ -241,6 +242,7 @@ class _HasilState extends State<Hasil> {
                                   ),
                                   onPressed: () => {
                                     if(hasilBenar > 7){
+                                      resetNilai_lv1(),
                                       lanjutKuis2()
                                     }else{
                                       resetNilai_lv1(),

@@ -68,7 +68,7 @@ class _Level2HasilState extends State<Level2Hasil> {
                             top: 30, bottom: 10, left: 10, right: 10),
                         child: Container(
                           width: 0.8 * MediaQuery.of(context).size.width,
-                          height: 0.6 * MediaQuery.of(context).size.height,
+                          height: 0.5 * MediaQuery.of(context).size.height,
                           child: Column(
                             children: [
                               Text("Hasil Test\n",
@@ -210,6 +210,7 @@ class _Level2HasilState extends State<Level2Hasil> {
                             ),
                             onPressed: () => {
                               keMenuKuis(),
+                              resetNilai_lv2(),
                               lv2_hasilBenar = 0,
                               lv2_hasilSalah = 0,
                             },
@@ -236,6 +237,7 @@ class _Level2HasilState extends State<Level2Hasil> {
                             ),
                             onPressed: () => {
                               if(lv2_hasilBenar > 7){
+                                resetNilai_lv2(),
                                 keSoon()
                               }else{
                                 resetNilai_lv2(),
