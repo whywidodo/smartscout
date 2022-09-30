@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:smartscout/Constant/Warna.dart';
 import 'package:smartscout/Layout/Homepage.dart';
 
@@ -38,6 +39,18 @@ class _SplashScreenState extends State<SplashScreen> {
                 "assets/images/icons/sscpurpletitle.png",
                 width: 150,
                 height: 150,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 25.0),
+                child: LinearPercentIndicator(
+                  width: MediaQuery.of(context).size.width - 70,
+                  animation: true,
+                  lineHeight: 15.0,
+                  animationDuration: 5000,
+                  percent: 1,
+                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  progressColor: warnaUngu,
+                ),
               ),
               // Text("SmartScout",style: TextStyle(fontFamily: 'PoppinsBlack',color: Color (0xFF6A2B84)))
             ],
