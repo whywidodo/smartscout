@@ -85,6 +85,10 @@ var kuis3 = "null";
 var kuis4 = "null";
 var kuis5 = "null";
 
+var judulInfo = "Informasi Permainan.";
+var infoKuis = "Setiap level terdiri dari 10 soal."
+               "Anda harus menjawab 8 pertanyaan dengan benar untuk dapat melanjutkan ke level berikutnya.";
+
 List<String> huruf = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 List<String> hurufMorse = [".-", "-...", "-.-.", "-..", ".","..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",

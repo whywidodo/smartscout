@@ -62,6 +62,17 @@ class _PilihanKuisState extends State<PilihanKuis> {
               ),
             ),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: IconButton(
+                icon: const Icon(Icons.info_outline, color: warnaPutih,),
+                onPressed: () {
+                  keInfoKuis();
+                },
+              ),
+            )
+          ],
         ),
         body:
         ListView(
@@ -502,6 +513,60 @@ class _PilihanKuisState extends State<PilihanKuis> {
                     padding: EdgeInsets.symmetric(vertical: 5),
                     child: Text(
                       alertSoon,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: warnaHitamAbu,
+                          fontFamily: 'PoppinsMedium',
+                          fontSize: ukFormTulisanKecil),
+                    )
+                ),
+                Container(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: EdgeInsets.all(5),
+                      child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true).pop();
+                        },
+                        style: OutlinedButton.styleFrom(
+                          primary: Colors.white,
+                          backgroundColor: warnaUngu,
+                        ),
+                        child: Text("OK", style: TextStyle(color: warnaPutih, fontSize: ukFormTulisanKecil)),
+                      ),
+                    )
+                )
+              ],
+            ),
+          );
+        });
+  }
+
+  void keInfoKuis(){
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            scrollable: true,
+            content: Column(
+              children: <Widget>[
+                Icon(Icons.error_outline_outlined, color: warnaCyan500, size: ukSimbolSedang),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    judulInfo,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        color: warnaHitamAbu,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: ukFormTulisanKecil),
+                  ),
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: Text(
+                      infoKuis,
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                           color: warnaHitamAbu,
